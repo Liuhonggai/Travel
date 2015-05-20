@@ -1,0 +1,513 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C25203761B0C1E7200627068 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C25203751B0C1E7200627068 /* main.m */; };
+		C25203791B0C1E7200627068 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C25203781B0C1E7200627068 /* AppDelegate.m */; };
+		C252037F1B0C1E7200627068 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C252037D1B0C1E7200627068 /* Main.storyboard */; };
+		C25203811B0C1E7200627068 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C25203801B0C1E7200627068 /* Images.xcassets */; };
+		C25203841B0C1E7200627068 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C25203821B0C1E7200627068 /* LaunchScreen.xib */; };
+		C25203901B0C1E7200627068 /* HappyWeekendTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C252038F1B0C1E7200627068 /* HappyWeekendTests.m */; };
+		C25203B01B0CA82200627068 /* LLBlurSidebar.m in Sources */ = {isa = PBXBuildFile; fileRef = C25203AF1B0CA82200627068 /* LLBlurSidebar.m */; };
+		C25203B61B0CAA0400627068 /* DrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C25203B51B0CAA0400627068 /* DrawerViewController.m */; };
+		C25203B91B0CAA9C00627068 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C25203B81B0CAA9C00627068 /* HomeTableViewController.m */; };
+		C25203BE1B0CC09A00627068 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C25203BD1B0CC09A00627068 /* 1.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C252038A1B0C1E7200627068 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C25203681B0C1E7200627068 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C252036F1B0C1E7200627068;
+			remoteInfo = HappyWeekend;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C25203701B0C1E7200627068 /* HappyWeekend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyWeekend.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C25203741B0C1E7200627068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C25203751B0C1E7200627068 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C25203771B0C1E7200627068 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
+		C25203781B0C1E7200627068 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
+		C252037E1B0C1E7200627068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C25203801B0C1E7200627068 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C25203831B0C1E7200627068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C25203891B0C1E7200627068 /* HappyWeekendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyWeekendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C252038E1B0C1E7200627068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C252038F1B0C1E7200627068 /* HappyWeekendTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HappyWeekendTests.m; sourceTree = "<group>"; };
+		C25203AE1B0CA82200627068 /* LLBlurSidebar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLBlurSidebar.h; sourceTree = "<group>"; };
+		C25203AF1B0CA82200627068 /* LLBlurSidebar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLBlurSidebar.m; sourceTree = "<group>"; };
+		C25203B41B0CAA0400627068 /* DrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerViewController.h; sourceTree = "<group>"; };
+		C25203B51B0CAA0400627068 /* DrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerViewController.m; sourceTree = "<group>"; };
+		C25203B71B0CAA9C00627068 /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
+		C25203B81B0CAA9C00627068 /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
+		C25203BD1B0CC09A00627068 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C252036D1B0C1E7200627068 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C25203861B0C1E7200627068 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C25203671B0C1E7200627068 = {
+			isa = PBXGroup;
+			children = (
+				C25203721B0C1E7200627068 /* HappyWeekend */,
+				C252038C1B0C1E7200627068 /* HappyWeekendTests */,
+				C25203711B0C1E7200627068 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C25203711B0C1E7200627068 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C25203701B0C1E7200627068 /* HappyWeekend.app */,
+				C25203891B0C1E7200627068 /* HappyWeekendTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C25203721B0C1E7200627068 /* HappyWeekend */ = {
+			isa = PBXGroup;
+			children = (
+				C25203BA1B0CC03D00627068 /* Image */,
+				C25203A11B0C204B00627068 /* APP */,
+				C25203A01B0C204100627068 /* Detail */,
+				C252039C1B0C200900627068 /* Home */,
+				C252037D1B0C1E7200627068 /* Main.storyboard */,
+				C25203801B0C1E7200627068 /* Images.xcassets */,
+				C25203821B0C1E7200627068 /* LaunchScreen.xib */,
+				C25203731B0C1E7200627068 /* Supporting Files */,
+			);
+			path = HappyWeekend;
+			sourceTree = "<group>";
+		};
+		C25203731B0C1E7200627068 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C25203741B0C1E7200627068 /* Info.plist */,
+				C25203751B0C1E7200627068 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C252038C1B0C1E7200627068 /* HappyWeekendTests */ = {
+			isa = PBXGroup;
+			children = (
+				C252038F1B0C1E7200627068 /* HappyWeekendTests.m */,
+				C252038D1B0C1E7200627068 /* Supporting Files */,
+			);
+			path = HappyWeekendTests;
+			sourceTree = "<group>";
+		};
+		C252038D1B0C1E7200627068 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C252038E1B0C1E7200627068 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C252039C1B0C200900627068 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C25203A71B0CA20A00627068 /* Drawer */,
+				C252039D1B0C200D00627068 /* Controller */,
+				C252039E1B0C201E00627068 /* Model */,
+				C252039F1B0C202C00627068 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C252039D1B0C200D00627068 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C25203B41B0CAA0400627068 /* DrawerViewController.h */,
+				C25203B51B0CAA0400627068 /* DrawerViewController.m */,
+				C25203B71B0CAA9C00627068 /* HomeTableViewController.h */,
+				C25203B81B0CAA9C00627068 /* HomeTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C252039E1B0C201E00627068 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C252039F1B0C202C00627068 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C25203A01B0C204100627068 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		C25203A11B0C204B00627068 /* APP */ = {
+			isa = PBXGroup;
+			children = (
+				C25203771B0C1E7200627068 /* AppDelegate.h */,
+				C25203781B0C1E7200627068 /* AppDelegate.m */,
+			);
+			path = APP;
+			sourceTree = "<group>";
+		};
+		C25203A71B0CA20A00627068 /* Drawer */ = {
+			isa = PBXGroup;
+			children = (
+				C25203AE1B0CA82200627068 /* LLBlurSidebar.h */,
+				C25203AF1B0CA82200627068 /* LLBlurSidebar.m */,
+			);
+			path = Drawer;
+			sourceTree = "<group>";
+		};
+		C25203BA1B0CC03D00627068 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				C25203BD1B0CC09A00627068 /* 1.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C252036F1B0C1E7200627068 /* HappyWeekend */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C25203931B0C1E7200627068 /* Build configuration list for PBXNativeTarget "HappyWeekend" */;
+			buildPhases = (
+				C252036C1B0C1E7200627068 /* Sources */,
+				C252036D1B0C1E7200627068 /* Frameworks */,
+				C252036E1B0C1E7200627068 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HappyWeekend;
+			productName = HappyWeekend;
+			productReference = C25203701B0C1E7200627068 /* HappyWeekend.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C25203881B0C1E7200627068 /* HappyWeekendTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C25203961B0C1E7200627068 /* Build configuration list for PBXNativeTarget "HappyWeekendTests" */;
+			buildPhases = (
+				C25203851B0C1E7200627068 /* Sources */,
+				C25203861B0C1E7200627068 /* Frameworks */,
+				C25203871B0C1E7200627068 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C252038B1B0C1E7200627068 /* PBXTargetDependency */,
+			);
+			name = HappyWeekendTests;
+			productName = HappyWeekendTests;
+			productReference = C25203891B0C1E7200627068 /* HappyWeekendTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C25203681B0C1E7200627068 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = lanou3g;
+				TargetAttributes = {
+					C252036F1B0C1E7200627068 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					C25203881B0C1E7200627068 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = C252036F1B0C1E7200627068;
+					};
+				};
+			};
+			buildConfigurationList = C252036B1B0C1E7200627068 /* Build configuration list for PBXProject "HappyWeekend" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C25203671B0C1E7200627068;
+			productRefGroup = C25203711B0C1E7200627068 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C252036F1B0C1E7200627068 /* HappyWeekend */,
+				C25203881B0C1E7200627068 /* HappyWeekendTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C252036E1B0C1E7200627068 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C252037F1B0C1E7200627068 /* Main.storyboard in Resources */,
+				C25203BE1B0CC09A00627068 /* 1.png in Resources */,
+				C25203841B0C1E7200627068 /* LaunchScreen.xib in Resources */,
+				C25203811B0C1E7200627068 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C25203871B0C1E7200627068 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C252036C1B0C1E7200627068 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C25203791B0C1E7200627068 /* AppDelegate.m in Sources */,
+				C25203B91B0CAA9C00627068 /* HomeTableViewController.m in Sources */,
+				C25203B61B0CAA0400627068 /* DrawerViewController.m in Sources */,
+				C25203B01B0CA82200627068 /* LLBlurSidebar.m in Sources */,
+				C25203761B0C1E7200627068 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C25203851B0C1E7200627068 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C25203901B0C1E7200627068 /* HappyWeekendTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C252038B1B0C1E7200627068 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C252036F1B0C1E7200627068 /* HappyWeekend */;
+			targetProxy = C252038A1B0C1E7200627068 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C252037D1B0C1E7200627068 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C252037E1B0C1E7200627068 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C25203821B0C1E7200627068 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C25203831B0C1E7200627068 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C25203911B0C1E7200627068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C25203921B0C1E7200627068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C25203941B0C1E7200627068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				INFOPLIST_FILE = HappyWeekend/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C25203951B0C1E7200627068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				INFOPLIST_FILE = HappyWeekend/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C25203971B0C1E7200627068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HappyWeekendTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HappyWeekend.app/HappyWeekend";
+			};
+			name = Debug;
+		};
+		C25203981B0C1E7200627068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HappyWeekendTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HappyWeekend.app/HappyWeekend";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C252036B1B0C1E7200627068 /* Build configuration list for PBXProject "HappyWeekend" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C25203911B0C1E7200627068 /* Debug */,
+				C25203921B0C1E7200627068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C25203931B0C1E7200627068 /* Build configuration list for PBXNativeTarget "HappyWeekend" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C25203941B0C1E7200627068 /* Debug */,
+				C25203951B0C1E7200627068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C25203961B0C1E7200627068 /* Build configuration list for PBXNativeTarget "HappyWeekendTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C25203971B0C1E7200627068 /* Debug */,
+				C25203981B0C1E7200627068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C25203681B0C1E7200627068 /* Project object */;
+}
