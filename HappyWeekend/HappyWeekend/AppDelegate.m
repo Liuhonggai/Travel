@@ -22,8 +22,9 @@
     [self.window makeKeyAndVisible];
     
     HomeTableViewController *homeVC = [[HomeTableViewController alloc] init];
-//    UINavigationController *homeNAV = [[UINavigationController alloc] initWithRootViewController:homeVC];
-    self.window.rootViewController = homeVC;
+    UINavigationController *homeNAV = [[UINavigationController alloc] initWithRootViewController:homeVC];
+    homeNAV.navigationBar.backgroundColor = [UIColor blackColor];
+    self.window.rootViewController = homeNAV;
 
     
     

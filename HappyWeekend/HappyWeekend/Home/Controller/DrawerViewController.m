@@ -11,6 +11,7 @@
 
 @interface DrawerViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic ,strong) UITableView *drawerTableView;
+@property (nonatomic ,strong) NSArray *arr;
 
 @end
 
@@ -19,23 +20,30 @@
 - (void)viewDidLoad {  
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.drawerTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width - 135, self.view.frame.size.height - 100)];
+    self.drawerTableView = [[UITableView alloc] initWithFrame:self.contentView.bounds];
     [self.drawerTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     self.drawerTableView.backgroundColor = [UIColor redColor];
-    self.drawerTableView.alpha = 0.3;
+//    self.drawerTableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"11.jpg"]];
+//    self.drawerTableView.alpha = 0.5;
     self.drawerTableView.delegate = self;
     self.drawerTableView.dataSource = self;
     [self.contentView addSubview:self.drawerTableView];
+    self.arr = @[@" ",@"HAHA",@"HEHE",@"SHABI"];
+
+    
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return _arr.count;
 }
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 50;
+//    if (indexPath.row == 0) {
+//        return 150;
+//    }
+    return 60;
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -48,8 +56,7 @@
     }
     cell.selectionStyle = NO;
     cell.textLabel.textColor = [UIColor whiteColor];
-    cell.textLabel.text = [NSString stringWithFormat:@"菜单%ld", (long)indexPath.row];
-    
+    cell.textLabel.text = [self.arr objectAtIndex:indexPath.row];
     return cell;
 }
 

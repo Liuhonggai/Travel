@@ -8,7 +8,7 @@
 
 #import "LLBlurSidebar.h"
 #import <Accelerate/Accelerate.h>
-
+#import "HomeTableViewController.h"
 //#define LLDEBUG
 #ifdef LLDEBUG
 #define LLLog(format, ...) NSLog(format, ## __VA_ARGS__)
@@ -43,11 +43,11 @@
     [super viewDidLoad];
     
     self.view.userInteractionEnabled = YES;
-    self.view.backgroundColor = [UIColor clearColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     self.snapImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
     self.snapImageView.userInteractionEnabled = YES;
-    //    [self.view addSubview:self.snapImageView]; // 暂时不用它,以后可以用作固定背景
+        [self.view addSubview:self.snapImageView]; // 暂时不用它,以后可以用作固定背景
     
     self.blurView = [[UIView alloc] initWithFrame:self.view.bounds];
     self.blurView.userInteractionEnabled = NO;
@@ -155,110 +155,110 @@
     }
 }
 
-#pragma mark - 手势响应
+//#pragma mark - 手势响应
 - (void)tapDetected:(UITapGestureRecognizer*)recognizer
 {
     [self autoShowHideSidebar];
 }
 
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
-{
-    CGPoint point = [touch locationInView:self.view];
-    if (point.x < kSidebarWidth) {
-        return NO;
-    }
-    return  YES;
-}
+//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+//{
+//    CGPoint point = [touch locationInView:self.view];
+//    if (point.x < kSidebarWidth) {
+//        return NO;
+//    }
+//    return  YES;
+//}
 
 // 仅供判断右滑
-- (void)panDetectedForBack:(UIPanGestureRecognizer *)recoginzer
-{
-    LLLog(@"\n slide Detected");
-    
-    CGPoint touchPoint = [recoginzer locationInView:self.view];
-    CGFloat offsetX = touchPoint.x - startTouchPotin.x;
-    
-    if (recoginzer.state == UIGestureRecognizerStateBegan) {
-        LLLog(@"┌ slide Begin point = %f", touchPoint.x);
-        startTouchPotin = touchPoint;
-        
-    }else if (recoginzer.state == UIGestureRecognizerStateEnded){
-        
-        LLLog(@"└ slide End");
-        
-        if (offsetX > 40) // 右滑大于40
-        {
-            [self slideToRightOccured];
-        }
-        return;
-    }
-}
+//- (void)panDetectedForBack:(UIPanGestureRecognizer *)recoginzer
+//{
+//    LLLog(@"\n slide Detected");
+//    
+//    CGPoint touchPoint = [recoginzer locationInView:self.view];
+//    CGFloat offsetX = touchPoint.x - startTouchPotin.x;
+//    
+//    if (recoginzer.state == UIGestureRecognizerStateBegan) {
+//        LLLog(@"┌ slide Begin point = %f", touchPoint.x);
+//        startTouchPotin = touchPoint;
+//        
+//    }else if (recoginzer.state == UIGestureRecognizerStateEnded){
+//        
+//        LLLog(@"└ slide End");
+//        
+//        if (offsetX > 40) // 右滑大于40
+//        {
+//            [self slideToRightOccured];
+//        }
+//        return;
+//    }
+//}
 
-- (void)panDetected:(UIPanGestureRecognizer *)recoginzer
-{
-    LLLog(@"\n pan Detected");
-    
-    CGPoint touchPoint = [recoginzer locationInView:self.view];
-    CGFloat offsetX = touchPoint.x - startTouchPotin.x;
-    
-    if (recoginzer.state == UIGestureRecognizerStateBegan) {
-        
-        LLLog(@"┌ Pan Begin point = %f", touchPoint.x);
-        
-        _isMoving = YES;
-        startTouchPotin = touchPoint;
-        
-        self.view.hidden = NO;
-        [self beginShowSidebar];
-        
-    }else if (recoginzer.state == UIGestureRecognizerStateEnded){
-        
-        LLLog(@"└ Pan End");
-        
-        if (offsetX > 40 || ((int)startContentOriginX==0 && offsetX<0 && offsetX>-20)) // 右滑大于40，或展开时左滑一丁点
-        {
-            [self slideToRightOccured]; // 即将显示到底
-            
-            LLLog(@"显示到底----->");
-            self.view.hidden = NO;
-            [UIView animateWithDuration:0.3 animations:^{
-                [self setSidebarOriginX:0];
-            } completion:^(BOOL finished) {
-                _isMoving = NO;
-                [self sidebarDidShown];
-            }];
-        }
-        else
-        {
-            LLLog(@"<-----隐藏到底");
-            [UIView animateWithDuration:0.3 animations:^{
-                [self setSidebarOriginX:-kSidebarWidth];
-            } completion:^(BOOL finished) {
-                _isMoving = NO;
-                self.view.hidden = YES;
-            }];
-        }
-        return;
-        
-    }else if (recoginzer.state == UIGestureRecognizerStateCancelled)
-    {
-        LLLog(@"Pan Cancelled");
-        [UIView animateWithDuration:0.3 animations:^{
-            [self setSidebarOriginX:-kSidebarWidth];
-        } completion:^(BOOL finished) {
-            _isMoving = NO;
-            self.view.hidden = YES;
-        }];
-        return;
-    }
-    
-    if (_isMoving) {
-        [self setSidebarOffset:offsetX];
-        LLLog(@"Moving …… touch=%f, offset=%f", touchPoint.x, offsetX);
-    }
-    
-}
-
+//- (void)panDetected:(UIPanGestureRecognizer *)recoginzer
+//{
+//    LLLog(@"\n pan Detected");
+//    
+//    CGPoint touchPoint = [recoginzer locationInView:self.view];
+//    CGFloat offsetX = touchPoint.x - startTouchPotin.x;
+//    
+//    if (recoginzer.state == UIGestureRecognizerStateBegan) {
+//        
+//        LLLog(@"┌ Pan Begin point = %f", touchPoint.x);
+//        
+//        _isMoving = YES;
+//        startTouchPotin = touchPoint;
+//        
+//        self.view.hidden = NO;
+//        [self beginShowSidebar];
+//        
+//    }else if (recoginzer.state == UIGestureRecognizerStateEnded){
+//        
+//        LLLog(@"└ Pan End");
+//        
+//        if (offsetX > 40 || ((int)startContentOriginX==0 && offsetX<0 && offsetX>-20)) // 右滑大于40，或展开时左滑一丁点
+//        {
+//            [self slideToRightOccured]; // 即将显示到底
+//            
+//            LLLog(@"显示到底----->");
+//            self.view.hidden = NO;
+//            [UIView animateWithDuration:0.3 animations:^{
+//                [self setSidebarOriginX:0];
+//            } completion:^(BOOL finished) {
+//                _isMoving = NO;
+//                [self sidebarDidShown];
+//            }];
+//        }
+//        else
+//        {
+//            LLLog(@"<-----隐藏到底");
+//            [UIView animateWithDuration:0.3 animations:^{
+//                [self setSidebarOriginX:-kSidebarWidth];
+//            } completion:^(BOOL finished) {
+//                _isMoving = NO;
+//                self.view.hidden = YES;
+//            }];
+//        }
+//        return;
+//        
+//    }else if (recoginzer.state == UIGestureRecognizerStateCancelled)
+//    {
+//        LLLog(@"Pan Cancelled");
+//        [UIView animateWithDuration:0.3 animations:^{
+//            [self setSidebarOriginX:-kSidebarWidth];
+//        } completion:^(BOOL finished) {
+//            _isMoving = NO;
+//            self.view.hidden = YES;
+//        }];
+//        return;
+//    }
+//    
+//    if (_isMoving) {
+//        [self setSidebarOffset:offsetX];
+//        LLLog(@"Moving …… touch=%f, offset=%f", touchPoint.x, offsetX);
+//    }
+//    
+//}
+//
 #pragma mark - 侧栏出来
 /*
  * 设置侧栏位置
@@ -309,7 +309,7 @@
 {
     CGRect rect = self.contentView.frame;
     float percent = (kSidebarWidth + rect.origin.x) / kSidebarWidth;
-    self.blurView.alpha = percent = 0.2 + (1-0.2)*(percent); // 不从0开始，效果更明显
+//    self.blurView.alpha = percent = 0.2 + (1-0.2)*(percent); // 不从0开始，效果更明显
     //    self.blurView.alpha = percent;
     LLLog(@"blur alpha = %f", percent);
     

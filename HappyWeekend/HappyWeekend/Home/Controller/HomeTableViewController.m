@@ -8,6 +8,7 @@
 
 #import "HomeTableViewController.h"
 #import "DrawerViewController.h"
+#import "HomeTableViewCell.h"
 @interface HomeTableViewController ()
 @property (nonatomic ,strong) DrawerViewController *drawerVC;
 @end
@@ -21,47 +22,24 @@
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    //左边侧栏开始
-    // 左侧边栏开始
-//    UIPanGestureRecognizer* panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panDetected:)];
-//    [panGesture delaysTouchesBegan];
-//    [self.view addGestureRecognizer:panGesture];
-        
-    [self initNavigationBar];
-
+    self.navigationItem.title = @"周末精选";
+    
     self.drawerVC = [[DrawerViewController alloc] init];
     [self.drawerVC setBgRGB:0x000000];
     [self.view addSubview:self.drawerVC.view];
     self.drawerVC.view.frame  = self.view.bounds;
-    
+   
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 
+    UIBarButtonItem *leftBar = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"1.png"] style:UIBarButtonItemStylePlain target:self action:@selector(click)];
+    self.navigationItem.leftBarButtonItem = leftBar;
     
 }
-- (void)initNavigationBar
-{
-    [self.navigationController setNavigationBarHidden:YES];
-    UINavigationBar *bar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 64)];
-    [bar setBackgroundColor:[UIColor whiteColor]];
-    UINavigationItem *item = [[UINavigationItem alloc] initWithTitle:nil];
-    
-    UIButton *left = [UIButton buttonWithType:UIButtonTypeCustom];
-    
-    [left setFrame:CGRectMake(0, 2, 28, 28)];
-    [left setImage:[UIImage imageNamed:@"1.png"] forState:UIControlStateNormal];
-//    [left setBackgroundColor:[UIColor redColor]];
-    [left addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithCustomView:left];
-    [item setLeftBarButtonItem:leftButton];
-    [bar pushNavigationItem:item animated:NO];
-    
-    [self.view addSubview:bar];
-}
-
 - (void)click
 {
+//    self.navigationController.navigationBarHidden = YES;
     [self.drawerVC showHideSidebar];
+//    self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)panDetected:(UIPanGestureRecognizer*)recoginzer
@@ -88,9 +66,9 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier"];
+    HomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier"];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseIdentifier"];
+        cell = [[HomeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseIdentifier"];
     }
     cell.selectionStyle = NO;
     

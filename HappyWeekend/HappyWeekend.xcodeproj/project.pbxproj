@@ -17,6 +17,8 @@
 		C25203B61B0CAA0400627068 /* DrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C25203B51B0CAA0400627068 /* DrawerViewController.m */; };
 		C25203B91B0CAA9C00627068 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C25203B81B0CAA9C00627068 /* HomeTableViewController.m */; };
 		C25203BE1B0CC09A00627068 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C25203BD1B0CC09A00627068 /* 1.png */; };
+		C2D5148E1B0DC6890007D860 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D5148D1B0DC6890007D860 /* HomeTableViewCell.m */; };
+		C2D514CD1B0E0C120007D860 /* 11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2D514CC1B0E0C120007D860 /* 11.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,11 +45,14 @@
 		C252038F1B0C1E7200627068 /* HappyWeekendTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HappyWeekendTests.m; sourceTree = "<group>"; };
 		C25203AE1B0CA82200627068 /* LLBlurSidebar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLBlurSidebar.h; sourceTree = "<group>"; };
 		C25203AF1B0CA82200627068 /* LLBlurSidebar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLBlurSidebar.m; sourceTree = "<group>"; };
-		C25203B41B0CAA0400627068 /* DrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerViewController.h; sourceTree = "<group>"; };
-		C25203B51B0CAA0400627068 /* DrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerViewController.m; sourceTree = "<group>"; };
+		C25203B41B0CAA0400627068 /* DrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawerViewController.h; path = ../Controller/DrawerViewController.h; sourceTree = "<group>"; };
+		C25203B51B0CAA0400627068 /* DrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawerViewController.m; path = ../Controller/DrawerViewController.m; sourceTree = "<group>"; };
 		C25203B71B0CAA9C00627068 /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
 		C25203B81B0CAA9C00627068 /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
 		C25203BD1B0CC09A00627068 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		C2D5148C1B0DC6890007D860 /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
+		C2D5148D1B0DC6890007D860 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
+		C2D514CC1B0E0C120007D860 /* 11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +135,6 @@
 		C252039C1B0C200900627068 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				C25203A71B0CA20A00627068 /* Drawer */,
 				C252039D1B0C200D00627068 /* Controller */,
 				C252039E1B0C201E00627068 /* Model */,
 				C252039F1B0C202C00627068 /* View */,
@@ -141,8 +145,7 @@
 		C252039D1B0C200D00627068 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C25203B41B0CAA0400627068 /* DrawerViewController.h */,
-				C25203B51B0CAA0400627068 /* DrawerViewController.m */,
+				C25203A71B0CA20A00627068 /* Drawer */,
 				C25203B71B0CAA9C00627068 /* HomeTableViewController.h */,
 				C25203B81B0CAA9C00627068 /* HomeTableViewController.m */,
 			);
@@ -159,6 +162,8 @@
 		C252039F1B0C202C00627068 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C2D5148C1B0DC6890007D860 /* HomeTableViewCell.h */,
+				C2D5148D1B0DC6890007D860 /* HomeTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,15 +187,19 @@
 		C25203A71B0CA20A00627068 /* Drawer */ = {
 			isa = PBXGroup;
 			children = (
+				C25203B41B0CAA0400627068 /* DrawerViewController.h */,
+				C25203B51B0CAA0400627068 /* DrawerViewController.m */,
 				C25203AE1B0CA82200627068 /* LLBlurSidebar.h */,
 				C25203AF1B0CA82200627068 /* LLBlurSidebar.m */,
 			);
-			path = Drawer;
+			name = Drawer;
+			path = ../Drawer;
 			sourceTree = "<group>";
 		};
 		C25203BA1B0CC03D00627068 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				C2D514CC1B0E0C120007D860 /* 11.jpg */,
 				C25203BD1B0CC09A00627068 /* 1.png */,
 			);
 			path = Image;
@@ -276,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2D514CD1B0E0C120007D860 /* 11.jpg in Resources */,
 				C252037F1B0C1E7200627068 /* Main.storyboard in Resources */,
 				C25203BE1B0CC09A00627068 /* 1.png in Resources */,
 				C25203841B0C1E7200627068 /* LaunchScreen.xib in Resources */,
@@ -299,6 +309,7 @@
 			files = (
 				C25203791B0C1E7200627068 /* AppDelegate.m in Sources */,
 				C25203B91B0CAA9C00627068 /* HomeTableViewController.m in Sources */,
+				C2D5148E1B0DC6890007D860 /* HomeTableViewCell.m in Sources */,
 				C25203B61B0CAA0400627068 /* DrawerViewController.m in Sources */,
 				C25203B01B0CA82200627068 /* LLBlurSidebar.m in Sources */,
 				C25203761B0C1E7200627068 /* main.m in Sources */,
