@@ -19,6 +19,7 @@
 		C25203BE1B0CC09A00627068 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C25203BD1B0CC09A00627068 /* 1.png */; };
 		C2D5148E1B0DC6890007D860 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D5148D1B0DC6890007D860 /* HomeTableViewCell.m */; };
 		C2D514CD1B0E0C120007D860 /* 11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2D514CC1B0E0C120007D860 /* 11.jpg */; };
+		C2D60D5B1B0EC7F90045DE6B /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D60D5A1B0EC7F90045DE6B /* Home.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		C2D5148C1B0DC6890007D860 /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
 		C2D5148D1B0DC6890007D860 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
 		C2D514CC1B0E0C120007D860 /* 11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11.jpg; sourceTree = "<group>"; };
+		C2D60D591B0EC7F90045DE6B /* Home.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
+		C2D60D5A1B0EC7F90045DE6B /* Home.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Home.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +158,8 @@
 		C252039E1B0C201E00627068 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C2D60D591B0EC7F90045DE6B /* Home.h */,
+				C2D60D5A1B0EC7F90045DE6B /* Home.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 				C25203B91B0CAA9C00627068 /* HomeTableViewController.m in Sources */,
 				C2D5148E1B0DC6890007D860 /* HomeTableViewCell.m in Sources */,
 				C25203B61B0CAA0400627068 /* DrawerViewController.m in Sources */,
+				C2D60D5B1B0EC7F90045DE6B /* Home.m in Sources */,
 				C25203B01B0CA82200627068 /* LLBlurSidebar.m in Sources */,
 				C25203761B0C1E7200627068 /* main.m in Sources */,
 			);
