@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "HomeTableViewController.h"
+#import "LeftViewController.h"
+#import "DDMenuController.h"
 @interface AppDelegate ()
 
 @end
@@ -20,11 +22,16 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window setBackgroundColor:[UIColor clearColor]];
     [self.window makeKeyAndVisible];
+    LeftViewController *leftVC = [[LeftViewController alloc] init];
+    
     
     HomeTableViewController *homeVC = [[HomeTableViewController alloc] init];
     UINavigationController *homeNAV = [[UINavigationController alloc] initWithRootViewController:homeVC];
-    homeNAV.navigationBar.backgroundColor = [UIColor blackColor];
-    self.window.rootViewController = homeNAV;
+    DDMenuController *mune = [[DDMenuController alloc] initWithRootViewController:homeNAV];
+    mune.leftViewController = leftVC;
+    
+    
+    self.window.rootViewController = mune;
 
     
     

@@ -1,22 +1,18 @@
 //
-//  HomeTableViewController.m
+//  SettingTableViewController.m
 //  HappyWeekend
 //
 //  Created by lanou3g on 15/5/23.
 //  Copyright (c) 2015年 lanou3g. All rights reserved.
 //
 
-#import "HomeTableViewController.h"
-#import "HomeViewCell.h"
-#import "ScrollViewCell.h"
-#import "URLHeaders.h"
-#import "HomeWeek.h"
-#import "NetworkHandler.h"
-@interface HomeTableViewController ()
+#import "SettingTableViewController.h"
+
+@interface SettingTableViewController ()
 
 @end
 
-@implementation HomeTableViewController
+@implementation SettingTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,40 +22,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.navigationItem.title = @"周末";
-    UIBarButtonItem *leftBt = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"1.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(click:)];
-    self.navigationItem.leftBarButtonItem = leftBt;
-    
-    UIBarButtonItem *rightBt = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"1.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(searching:)];
-    self.navigationItem.rightBarButtonItem = rightBt;
-    
-    
-    __weak HomeTableViewController * homeTVC = self;
-    
-    NetworkHandler * handle = [[NetworkHandler alloc]init];
-    NSURL * url = [NSURL URLWithString:News_URL];
-    [handle getHomeListWithURL:url competion:^(id list) {
-        
-        homeTVC.homeList = list;
-        //   NSLog(@"++++%@",self.homeList);
-        
-        [homeTVC.tableView reloadData];
-        
-    }];
-
-    
+    self.view.backgroundColor = [UIColor redColor];
 }
-- (void)click:(UIBarButtonItem *)nar
-{
-//    [self.drawerVC showHideSidebar];
-    
-}
-
--(void)searching:(UIBarButtonItem *)nar
-{
-    
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -69,57 +33,26 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return self.homeList.count;
+    return 0;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return self.view.frame.size.height*1/3;
-}
-
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    HomeWeek * home = [_homeList objectAtIndex:indexPath.row];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    if (indexPath.row % 2 == 0)
-    {
-        
-        HomeViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier"];
-        if (cell == nil)
-        {
-            cell = [[HomeViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseIdentifier"];
-        }
-        cell.selectionStyle = NO;
-        
-        
-        cell.homeWeek = home;
-        
-        return cell;
-    }else
-    {
-        
-        ScrollViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AA"];
-        if (cell == nil)
-        {
-            cell = [[ScrollViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"AA"];
-        }
-        cell.selectionStyle = NO;
-        
-        cell.homeWeek = home;
-        
-        return cell;
-        
-    }
+    // Configure the cell...
     
-    return nil;
+    return cell;
 }
-
+*/
 
 /*
 // Override to support conditional editing of the table view.
