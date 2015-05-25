@@ -10,7 +10,10 @@
 #import "UIImageView+WebCache.h"
 @implementation ScrollViewCell
 
-
+- (void)imageDownloadDidFinishLoading:(UIImage *)img
+{
+    
+}
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];

@@ -8,6 +8,7 @@
 
 #import "LeftViewController.h"
 #import "SettingTableViewController.h"
+#import "HomeTableViewController.h"
 @interface LeftViewController ()
 
 @property (nonatomic ,strong) NSArray *arr;

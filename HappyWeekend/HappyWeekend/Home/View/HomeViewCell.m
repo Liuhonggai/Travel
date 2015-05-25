@@ -11,6 +11,11 @@
 #import "UIImageView+WebCache.h"
 @implementation HomeViewCell
 
+- (void)imageDownloadDidFinishLoading:(UIImage *)img
+{
+    
+}
+
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -30,9 +35,7 @@
         _imgView.image = [UIImage imageNamed:@"2.png"];
         [self.contentView addSubview:_imgView];
         
-        
         UILabel * titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0,[UIScreen mainScreen].bounds.size.height*1/3-50, self.frame.size.width, 25)];
-     //   titleLabel.text = @"我是我爱罗，大招杀人。。。";
        self.titleLabel=titleLabel;
         titleLabel.font = [UIFont systemFontOfSize:17];
         [self.contentView addSubview:titleLabel];
@@ -80,9 +83,6 @@
 {
     btn.showsTouchWhenHighlighted = YES;
 
-    
-   
-    
 }
 
 
@@ -134,7 +134,7 @@
      *
      *  @return <#return value description#>
      */
-  // [self.imgView sd_setImageWithURL:[NSURL URLWithString:homeWeek.imgUrl] placeholderImage:[UIImage imageNamed:@"1_wsk_123_123"]];
+   [self.imgView sd_setImageWithURL:[NSURL URLWithString:homeWeek.imgUrl] placeholderImage:[UIImage imageNamed:@"1_wsk_123_123"]];
     
     
     
