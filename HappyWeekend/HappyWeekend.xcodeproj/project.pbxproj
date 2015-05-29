@@ -318,6 +318,7 @@
 		C295D1D31B10A68D00669758 /* Set */ = {
 			isa = PBXGroup;
 			children = (
+				C2B456C91B16F753005ACAA5 /* share1 */,
 				C295D1D41B10A69D00669758 /* SettingTableViewController.h */,
 				C295D1D51B10A69D00669758 /* SettingTableViewController.m */,
 			);
@@ -337,6 +338,13 @@
 				C25025B41B12C27000366F58 /* Cachemanger.m */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		C2B456C91B16F753005ACAA5 /* share1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = share1;
 			sourceTree = "<group>";
 		};
 		C2D60D5F1B0ECB0D0045DE6B /* Controller */ = {
@@ -630,6 +638,10 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				INFOPLIST_FILE = HappyWeekend/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HappyWeekend/Set",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -641,6 +653,10 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				INFOPLIST_FILE = HappyWeekend/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HappyWeekend/Set",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

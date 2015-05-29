@@ -23,8 +23,9 @@
     table.delegate = self;
     table.dataSource = self;
     table.backgroundColor = [UIColor whiteColor];
+    table.tableFooterView = [[UIView alloc] init];
     [self.view addSubview:table];
-    
+
     self.arr = [NSArray arrayWithObjects:@"登陆",@"首页",@"我的收藏",@"设置", nil];
     
 }
@@ -48,7 +49,6 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    
     cell.textLabel.text = self.arr[indexPath.row];
     return cell;
 }
@@ -57,8 +57,38 @@
 {
     if (indexPath.row == 3) {
         SettingTableViewController *setting = [[SettingTableViewController alloc] init];
-        [self.navigationController pushViewController:setting animated:YES];
+        [self presentViewController:setting animated:YES completion:nil];
     }
+    
+    
+    
+    
+//    switch (indexPath.row) {
+//        case 0:{
+//            HomeTableViewController *home = [[HomeTableViewController alloc] init];
+//            [self presentViewController:home animated:YES completion:nil];
+//        }
+//            break;
+//        case 1:{
+//            HomeTableViewController *home = [[HomeTableViewController alloc] init];
+//            [self presentViewController:home animated:YES completion:nil];
+//        }
+//            break;
+//        case 0:{
+//            HomeTableViewController *home = [[HomeTableViewController alloc] init];
+//            [self presentViewController:home animated:YES completion:nil];
+//        }
+//            break;
+//        case 0:{
+//            HomeTableViewController *home = [[HomeTableViewController alloc] init];
+//            [self presentViewController:home animated:YES completion:nil];
+//        }
+//            break;
+//        default:
+//            break;
+//    }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
