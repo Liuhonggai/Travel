@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LeftViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface LeftViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
+@property (nonatomic ,strong) UIImageView *imgView;
 
 @end

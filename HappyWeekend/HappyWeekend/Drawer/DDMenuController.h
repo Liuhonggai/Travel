@@ -42,6 +42,7 @@ typedef enum {
     
     id _tap;
     id _pan;
+    id _click;
     
     CGFloat _panOriginX;
     CGPoint _panVelocity;
@@ -67,15 +68,22 @@ typedef enum {
 
 @property(nonatomic,readonly) UITapGestureRecognizer *tap;
 @property(nonatomic,readonly) UIPanGestureRecognizer *pan;
+@property (nonatomic ,strong) UIBarButtonItem *button;
 @property(nonatomic,strong) UIBarButtonItem *bar;
 
 - (void)setRootController:(UIViewController *)controller animated:(BOOL)animated; // used to push a new controller on the stack
-- (void)showRootController:(BOOL)animated; // reset to "home" view controller
 - (void)showRightController:(BOOL)animated;  // show right
+- (void)showRootController:(BOOL)animated; // reset to "home" view controller
 - (void)showLeftController:(BOOL)animated;  // show left
+
+
 
 @end
 
-@protocol DDMenuControllerDelegate 
-- (void)menuController:(DDMenuController*)controller willShowViewController:(UIViewController*)controller;
+
+@protocol DDMenuControllerDelegate
+
+
+- (void)menuController:(DDMenuController*)controller willShowViewController:(UIViewController*)controller1;
+
 @end

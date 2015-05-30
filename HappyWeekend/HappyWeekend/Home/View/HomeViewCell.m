@@ -160,12 +160,4 @@
 {
     self.imgView.image = img;
 }
-
-
-
-
-
-
-
-
 @end

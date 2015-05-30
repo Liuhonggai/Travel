@@ -33,6 +33,13 @@
 		C25203811B0C1E7200627068 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C25203801B0C1E7200627068 /* Images.xcassets */; };
 		C25203841B0C1E7200627068 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C25203821B0C1E7200627068 /* LaunchScreen.xib */; };
 		C25203901B0C1E7200627068 /* HappyWeekendTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C252038F1B0C1E7200627068 /* HappyWeekendTests.m */; };
+		C2589DAC1B18475B00B0B5A6 /* CollectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2589DAB1B18475B00B0B5A6 /* CollectTableViewController.m */; };
+		C2589DAF1B18477700B0B5A6 /* CollectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2589DAE1B18477700B0B5A6 /* CollectTableViewCell.m */; };
+		C25A30021B1993CB00343384 /* 20150530024202197_easyicon_net_32.png in Resources */ = {isa = PBXBuildFile; fileRef = C25A30011B1993CB00343384 /* 20150530024202197_easyicon_net_32.png */; };
+		C25A30041B19940600343384 /* 20150530024317286_easyicon_net_32.png in Resources */ = {isa = PBXBuildFile; fileRef = C25A30031B19940600343384 /* 20150530024317286_easyicon_net_32.png */; };
+		C25A30061B19940F00343384 /* 20150530024423920_easyicon_net_32.png in Resources */ = {isa = PBXBuildFile; fileRef = C25A30051B19940F00343384 /* 20150530024423920_easyicon_net_32.png */; };
+		C25A30081B19978900343384 /* 20150530024438931_easyicon_net_32.png in Resources */ = {isa = PBXBuildFile; fileRef = C25A30071B19978900343384 /* 20150530024438931_easyicon_net_32.png */; };
+		C25A300C1B1999F100343384 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C25A300B1B1999F100343384 /* 1.png */; };
 		C295D1CA1B1082B800669758 /* DDMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = C295D1C81B1082B800669758 /* DDMenuController.m */; };
 		C295D1CC1B1082C000669758 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C295D1CB1B1082C000669758 /* LeftViewController.m */; };
 		C295D1D21B10835E00669758 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C295D1D11B10835E00669758 /* HomeTableViewController.m */; };
@@ -41,7 +48,6 @@
 		C2D60D641B0ECB470045DE6B /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D60D631B0ECB470045DE6B /* DetailTableViewCell.m */; };
 		C2D60D671B0ECB560045DE6B /* Detail.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D60D661B0ECB560045DE6B /* Detail.m */; };
 		C2D60D6B1B0ECFCD0045DE6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D60D6A1B0ECFCD0045DE6B /* AppDelegate.m */; };
-		C2D60D7B1B0F0B440045DE6B /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C2D60D7A1B0F0B440045DE6B /* 1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +113,15 @@
 		C25203891B0C1E7200627068 /* HappyWeekendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyWeekendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C252038E1B0C1E7200627068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C252038F1B0C1E7200627068 /* HappyWeekendTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HappyWeekendTests.m; sourceTree = "<group>"; };
+		C2589DAA1B18475B00B0B5A6 /* CollectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectTableViewController.h; sourceTree = "<group>"; };
+		C2589DAB1B18475B00B0B5A6 /* CollectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectTableViewController.m; sourceTree = "<group>"; };
+		C2589DAD1B18477700B0B5A6 /* CollectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectTableViewCell.h; sourceTree = "<group>"; };
+		C2589DAE1B18477700B0B5A6 /* CollectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectTableViewCell.m; sourceTree = "<group>"; };
+		C25A30011B1993CB00343384 /* 20150530024202197_easyicon_net_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20150530024202197_easyicon_net_32.png; sourceTree = "<group>"; };
+		C25A30031B19940600343384 /* 20150530024317286_easyicon_net_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20150530024317286_easyicon_net_32.png; sourceTree = "<group>"; };
+		C25A30051B19940F00343384 /* 20150530024423920_easyicon_net_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20150530024423920_easyicon_net_32.png; sourceTree = "<group>"; };
+		C25A30071B19978900343384 /* 20150530024438931_easyicon_net_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20150530024438931_easyicon_net_32.png; sourceTree = "<group>"; };
+		C25A300B1B1999F100343384 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		C295D1C71B1082B800669758 /* DDMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMenuController.h; sourceTree = "<group>"; };
 		C295D1C81B1082B800669758 /* DDMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMenuController.m; sourceTree = "<group>"; };
 		C295D1C91B1082B800669758 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
@@ -124,7 +139,6 @@
 		C2D60D661B0ECB560045DE6B /* Detail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Detail.m; sourceTree = "<group>"; };
 		C2D60D691B0ECFC60045DE6B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C2D60D6A1B0ECFCD0045DE6B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C2D60D7A1B0F0B440045DE6B /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = ../Home/Controller/1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +236,7 @@
 				C25203BA1B0CC03D00627068 /* Image */,
 				C25203A01B0C204100627068 /* Detail */,
 				C295D1C61B1082AC00669758 /* Drawer */,
+				C2589DA31B1846FB00B0B5A6 /* Collect */,
 				C295D1D31B10A68D00669758 /* Set */,
 				C252039C1B0C200900627068 /* Home */,
 				C252037D1B0C1E7200627068 /* Main.storyboard */,
@@ -299,9 +314,48 @@
 		C25203BA1B0CC03D00627068 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				C2D60D7A1B0F0B440045DE6B /* 1.png */,
+				C25A30011B1993CB00343384 /* 20150530024202197_easyicon_net_32.png */,
+				C25A30031B19940600343384 /* 20150530024317286_easyicon_net_32.png */,
+				C25A30051B19940F00343384 /* 20150530024423920_easyicon_net_32.png */,
+				C25A30071B19978900343384 /* 20150530024438931_easyicon_net_32.png */,
+				C25A300B1B1999F100343384 /* 1.png */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		C2589DA31B1846FB00B0B5A6 /* Collect */ = {
+			isa = PBXGroup;
+			children = (
+				C2589DA91B18474700B0B5A6 /* Controller */,
+				C2589DA81B18473D00B0B5A6 /* View */,
+				C2589DA71B18473400B0B5A6 /* Model */,
+			);
+			path = Collect;
+			sourceTree = "<group>";
+		};
+		C2589DA71B18473400B0B5A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C2589DA81B18473D00B0B5A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2589DAD1B18477700B0B5A6 /* CollectTableViewCell.h */,
+				C2589DAE1B18477700B0B5A6 /* CollectTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C2589DA91B18474700B0B5A6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C2589DAA1B18475B00B0B5A6 /* CollectTableViewController.h */,
+				C2589DAB1B18475B00B0B5A6 /* CollectTableViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		C295D1C61B1082AC00669758 /* Drawer */ = {
@@ -318,7 +372,6 @@
 		C295D1D31B10A68D00669758 /* Set */ = {
 			isa = PBXGroup;
 			children = (
-				C2B456C91B16F753005ACAA5 /* share1 */,
 				C295D1D41B10A69D00669758 /* SettingTableViewController.h */,
 				C295D1D51B10A69D00669758 /* SettingTableViewController.m */,
 			);
@@ -338,13 +391,6 @@
 				C25025B41B12C27000366F58 /* Cachemanger.m */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		C2B456C91B16F753005ACAA5 /* share1 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = share1;
 			sourceTree = "<group>";
 		};
 		C2D60D5F1B0ECB0D0045DE6B /* Controller */ = {
@@ -462,9 +508,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C252037F1B0C1E7200627068 /* Main.storyboard in Resources */,
-				C2D60D7B1B0F0B440045DE6B /* 1.png in Resources */,
+				C25A30021B1993CB00343384 /* 20150530024202197_easyicon_net_32.png in Resources */,
+				C25A300C1B1999F100343384 /* 1.png in Resources */,
+				C25A30061B19940F00343384 /* 20150530024423920_easyicon_net_32.png in Resources */,
 				C25203841B0C1E7200627068 /* LaunchScreen.xib in Resources */,
 				C25203811B0C1E7200627068 /* Images.xcassets in Resources */,
+				C25A30081B19978900343384 /* 20150530024438931_easyicon_net_32.png in Resources */,
+				C25A30041B19940600343384 /* 20150530024317286_easyicon_net_32.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +533,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C25026161B12C2DA00366F58 /* UIImage+MultiFormat.m in Sources */,
+				C2589DAC1B18475B00B0B5A6 /* CollectTableViewController.m in Sources */,
 				C25026171B12C2DA00366F58 /* UIImage+WebP.m in Sources */,
 				C25025B71B12C27000366F58 /* Cachemanger.m in Sources */,
 				C25026121B12C2DA00366F58 /* SDWebImageManager.m in Sources */,
@@ -507,6 +558,7 @@
 				C250261A1B12C2DA00366F58 /* UIView+WebCacheOperation.m in Sources */,
 				C295D1D21B10835E00669758 /* HomeTableViewController.m in Sources */,
 				C295D1CA1B1082B800669758 /* DDMenuController.m in Sources */,
+				C2589DAF1B18477700B0B5A6 /* CollectTableViewCell.m in Sources */,
 				C25026111B12C2DA00366F58 /* SDWebImageDownloaderOperation.m in Sources */,
 				C25025B61B12C27000366F58 /* NetworkHandler.m in Sources */,
 				C25026191B12C2DA00366F58 /* UIImageView+WebCache.m in Sources */,
