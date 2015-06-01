@@ -33,7 +33,7 @@
 
 @property(nonatomic , strong)UIImage * img;//图片›
 
-
+@property (nonatomic, strong)NSString * homeId;//id
 
 @property(nonatomic , strong)NSString * imgUrl;//图片网址
 

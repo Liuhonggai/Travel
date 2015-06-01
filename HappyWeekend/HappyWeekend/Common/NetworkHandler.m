@@ -17,7 +17,7 @@
     //将传过来的callBack保存在属性中
     self.callBack = callBack;
     
-//    __block NetworkHandler * handler = self;
+//     __block NetworkHandler * handler = self;
     NSMutableURLRequest * req = [NSMutableURLRequest requestWithURL:url];
     
     [NSURLConnection sendAsynchronousRequest:req queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
@@ -40,7 +40,7 @@
             NSString * title = [homeDic objectForKey:@"title"];
             home.title = title;
             
-            NSLog(@"%@", home.title);
+           // NSLog(@"%@", home.title);
             
             NSString * dis = [homeDic objectForKey:@"distance_show"];
             home.distance = dis;
@@ -56,14 +56,12 @@
             
             home.imgUrl = [homeDic objectForKey:@"pic_list_img"];
            
-            NSLog(@"%@",home.imgUrl);
+            //NSLog(@"%@",home.imgUrl);
             
-            
+            home.homeId = [homeDic objectForKey:@"id"];
+
             [homArray addObject:home];
-           NSLog(@"%@",homArray[0]);
         }
-        NSLog(@"000000000%@",homArray);
-        //回调。。。
         self.callBack(homArray);
   
         

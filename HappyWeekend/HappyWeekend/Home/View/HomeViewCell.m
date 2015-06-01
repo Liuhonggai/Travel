@@ -107,8 +107,8 @@
     self.disLabel.text = homeWeek.distance;
     self.addrLabel.text = homeWeek.address;
     self.pLabel.text = [NSString stringWithFormat:@"%d",homeWeek.price];
-
-    
+    self.homeId = homeWeek.homeId;
+    NSLog(@"!!!!!!!!!!!!%@",self.homeId);
     /**
      *
      *  ok 应经改好了  你可以放开注释看看

@@ -12,7 +12,7 @@
 
 @property(nonatomic , strong)NSArray * homeList;
 
-@property(nonatomic , strong)UITableView * tableView;
 
+@property(nonatomic, strong)NSString * homeId;
 
 @end

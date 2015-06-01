@@ -7,7 +7,7 @@
 //
 
 #import "Detail.h"
-
 @implementation Detail
+
 
 @end

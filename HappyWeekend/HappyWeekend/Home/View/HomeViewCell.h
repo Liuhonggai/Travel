@@ -23,7 +23,7 @@
 @property (nonatomic , strong)UILabel * pLabel;
 
 @property (nonatomic , strong)UILabel * addrLabel;
-
+@property (nonatomic, strong)NSString * homeId;
 
 //@property (nonatomic , strong)UIButton * follow_num;
 

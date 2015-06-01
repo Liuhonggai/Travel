@@ -12,6 +12,7 @@
 #import "URLHeaders.h"
 #import "HomeWeek.h"
 #import "NetworkHandler.h"
+#import "DetailViewController.h"
 @interface HomeTableViewController ()
 
 @end
@@ -41,10 +42,10 @@
     [handle getHomeListWithURL:url competion:^(id list) {
         
         homeTVC.homeList = list;
-        //   NSLog(@"++++%@",self.homeList);
+        //   NSLog(@"++++%@",self.homeList)
         
         [homeTVC.tableView reloadData];
-        
+    
     }];
 
     
@@ -120,7 +121,13 @@
     return nil;
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row % 2 == 0) {
+        DetailViewController * detailView = [[DetailViewController alloc] init];
+        [self.navigationController pushViewController:detailView animated:YES];
+        
+    }
+}
 
 /*
 // Override to support conditional editing of the table view.

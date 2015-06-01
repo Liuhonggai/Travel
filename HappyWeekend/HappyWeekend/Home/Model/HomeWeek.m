@@ -39,7 +39,7 @@
     [archive encodeObject:_img forKey:@"img"];
     [archive finishEncoding];
     
-    
+
     //写入文件
     [data writeToFile:path atomically:YES];
     
