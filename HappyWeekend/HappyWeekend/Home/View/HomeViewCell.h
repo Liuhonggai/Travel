@@ -7,14 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HomeWeek.h"
-#import "ImageDownload.h"
 
-@interface HomeViewCell : UITableViewCell<ImageDownloadDelegate>
+#import "HomeListTwo.h"
+
+
+@interface HomeViewCell : UITableViewCell
 
 
 
 @property (nonatomic , strong)UIImageView * imgView;
+
+@property (nonatomic, strong)UIScrollView *scrollView;
 
 @property (nonatomic , strong)UILabel * titleLabel;
 
@@ -23,10 +26,8 @@
 @property (nonatomic , strong)UILabel * pLabel;
 
 @property (nonatomic , strong)UILabel * addrLabel;
-@property (nonatomic, strong)NSString * homeId;
 
-//@property (nonatomic , strong)UIButton * follow_num;
+@property(nonatomic,strong)HomeListTwo *homeListTwo;
 
-
-@property (nonatomic , strong)HomeWeek * homeWeek;
+@property(nonatomic , strong)UILabel * IDLabel;
 @end

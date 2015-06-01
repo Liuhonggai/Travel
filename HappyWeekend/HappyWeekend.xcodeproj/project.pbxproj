@@ -63,11 +63,13 @@
 		C2872BE61B1C75A300262A6A /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C2872BD81B1C75A300262A6A /* UIScrollView+MJExtension.m */; };
 		C2872BE71B1C75A300262A6A /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C2872BDA1B1C75A300262A6A /* UIScrollView+MJRefresh.m */; };
 		C2872BE81B1C75A300262A6A /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C2872BDC1B1C75A300262A6A /* UIView+MJExtension.m */; };
+		C2872BF11B1C86F000262A6A /* HomeList.m in Sources */ = {isa = PBXBuildFile; fileRef = C2872BEE1B1C86F000262A6A /* HomeList.m */; };
+		C2872BF21B1C86F000262A6A /* HomeListTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = C2872BF01B1C86F000262A6A /* HomeListTwo.m */; };
+		C2872BF51B1C876D00262A6A /* SearcherViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2872BF41B1C876D00262A6A /* SearcherViewCell.m */; };
 		C295D1CA1B1082B800669758 /* DDMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = C295D1C81B1082B800669758 /* DDMenuController.m */; };
 		C295D1CC1B1082C000669758 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C295D1CB1B1082C000669758 /* LeftViewController.m */; };
 		C295D1D21B10835E00669758 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C295D1D11B10835E00669758 /* HomeTableViewController.m */; };
 		C295D1D61B10A69D00669758 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C295D1D51B10A69D00669758 /* SettingTableViewController.m */; };
-		C2A66B4F1B12BC6000E6B73D /* HomeWeek.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A66B4E1B12BC6000E6B73D /* HomeWeek.m */; };
 		C2ABB3B31B1317E4008B5BBB /* ScrollPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ABB3B21B1317E4008B5BBB /* ScrollPhotoTableViewCell.m */; };
 		C2ABB3B61B1317FA008B5BBB /* MapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ABB3B51B1317FA008B5BBB /* MapTableViewCell.m */; };
 		C2D60D641B0ECB470045DE6B /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D60D631B0ECB470045DE6B /* DetailTableViewCell.m */; };
@@ -215,6 +217,12 @@
 		C2872BDA1B1C75A300262A6A /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		C2872BDB1B1C75A300262A6A /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		C2872BDC1B1C75A300262A6A /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		C2872BED1B1C86F000262A6A /* HomeList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeList.h; sourceTree = "<group>"; };
+		C2872BEE1B1C86F000262A6A /* HomeList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeList.m; sourceTree = "<group>"; };
+		C2872BEF1B1C86F000262A6A /* HomeListTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeListTwo.h; sourceTree = "<group>"; };
+		C2872BF01B1C86F000262A6A /* HomeListTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeListTwo.m; sourceTree = "<group>"; };
+		C2872BF31B1C876D00262A6A /* SearcherViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearcherViewCell.h; sourceTree = "<group>"; };
+		C2872BF41B1C876D00262A6A /* SearcherViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearcherViewCell.m; sourceTree = "<group>"; };
 		C295D1C71B1082B800669758 /* DDMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMenuController.h; sourceTree = "<group>"; };
 		C295D1C81B1082B800669758 /* DDMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMenuController.m; sourceTree = "<group>"; };
 		C295D1C91B1082B800669758 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
@@ -224,8 +232,6 @@
 		C295D1D41B10A69D00669758 /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
 		C295D1D51B10A69D00669758 /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
 		C2A66B4B1B12BC2200E6B73D /* URLHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URLHeaders.h; path = ../URLHeaders.h; sourceTree = "<group>"; };
-		C2A66B4D1B12BC6000E6B73D /* HomeWeek.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeWeek.h; sourceTree = "<group>"; };
-		C2A66B4E1B12BC6000E6B73D /* HomeWeek.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeWeek.m; sourceTree = "<group>"; };
 		C2ABB3B11B1317E4008B5BBB /* ScrollPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollPhotoTableViewCell.h; sourceTree = "<group>"; };
 		C2ABB3B21B1317E4008B5BBB /* ScrollPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollPhotoTableViewCell.m; sourceTree = "<group>"; };
 		C2ABB3B41B1317FA008B5BBB /* MapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTableViewCell.h; sourceTree = "<group>"; };
@@ -316,6 +322,8 @@
 				C25025AA1B12C10900366F58 /* HomeViewCell.m */,
 				C25025AB1B12C10900366F58 /* ScrollViewCell.h */,
 				C25025AC1B12C10900366F58 /* ScrollViewCell.m */,
+				C2872BF31B1C876D00262A6A /* SearcherViewCell.h */,
+				C2872BF41B1C876D00262A6A /* SearcherViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -447,8 +455,10 @@
 		C252039E1B0C201E00627068 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C2A66B4D1B12BC6000E6B73D /* HomeWeek.h */,
-				C2A66B4E1B12BC6000E6B73D /* HomeWeek.m */,
+				C2872BED1B1C86F000262A6A /* HomeList.h */,
+				C2872BEE1B1C86F000262A6A /* HomeList.m */,
+				C2872BEF1B1C86F000262A6A /* HomeListTwo.h */,
+				C2872BF01B1C86F000262A6A /* HomeListTwo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -916,6 +926,8 @@
 				C2872BE81B1C75A300262A6A /* UIView+MJExtension.m in Sources */,
 				C25026101B12C2DA00366F58 /* SDWebImageDownloader.m in Sources */,
 				C2D60D671B0ECB560045DE6B /* Detail.m in Sources */,
+				C2872BF21B1C86F000262A6A /* HomeListTwo.m in Sources */,
+				C2872BF11B1C86F000262A6A /* HomeList.m in Sources */,
 				C2872BE01B1C75A300262A6A /* MJRefreshFooter.m in Sources */,
 				C2872BE11B1C75A300262A6A /* MJRefreshGifFooter.m in Sources */,
 				C281B0501B1A9AAB00FA6591 /* PayViewCell.m in Sources */,
@@ -925,8 +937,8 @@
 				C2D60D6B1B0ECFCD0045DE6B /* AppDelegate.m in Sources */,
 				C2872BE51B1C75A300262A6A /* MJRefreshLegendHeader.m in Sources */,
 				C250260B1B12C2DA00366F58 /* MKAnnotationView+WebCache.m in Sources */,
+				C2872BF51B1C876D00262A6A /* SearcherViewCell.m in Sources */,
 				C281B0591B1AAE5700FA6591 /* TopTableViewCell.m in Sources */,
-				C2A66B4F1B12BC6000E6B73D /* HomeWeek.m in Sources */,
 				C250260C1B12C2DA00366F58 /* NSData+ImageContentType.m in Sources */,
 				C25026151B12C2DA00366F58 /* UIImage+GIF.m in Sources */,
 				C2ABB3B31B1317E4008B5BBB /* ScrollPhotoTableViewCell.m in Sources */,

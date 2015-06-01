@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ImageDownload.h"
+#import "HomeListTwo.h"
 @interface Detail : NSObject
 @property (nonatomic, strong)NSString * siteStr;
 @property (nonatomic, strong)NSString * addressesStr;
@@ -24,7 +25,8 @@
 @property (nonatomic, strong)UIImage * img;
 @property (nonatomic, assign)BOOL isDownloading;
 
+@property (nonatomic, assign)int ID;
 
-
+@property (nonatomic,strong)HomeListTwo * homeListTwo;
 
 @end

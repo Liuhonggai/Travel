@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HomeList.h"
+#import "HomeListTwo.h"
 
-#import "HomeWeek.h"
+
 
 typedef void(^CallBack)(id);
 

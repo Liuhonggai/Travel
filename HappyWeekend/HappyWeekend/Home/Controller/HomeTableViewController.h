@@ -7,12 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HomeListTwo.h"
+
 
 @interface HomeTableViewController : UITableViewController
 
 @property(nonatomic , strong)NSArray * homeList;
 
+@property(nonatomic , strong)NSArray * listArray;
 
-@property(nonatomic, strong)NSString * homeId;
+//@property(nonatomic , strong)UITableView * tableView;
 
+@property(nonatomic,assign)int pageSize;
+
+
+@property (nonatomic, strong)HomeListTwo * two;
 @end

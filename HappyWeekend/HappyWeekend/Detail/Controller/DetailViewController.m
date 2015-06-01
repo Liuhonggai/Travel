@@ -26,8 +26,9 @@
 {
     
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"touming"] forBarMetrics:UIBarMetricsDefault];
-        [[UINavigationBar appearance] setShadowImage:[UIImage alloc]];
-    
+//        [[UINavigationBar appearance] setShadowImage:[UIImage alloc]];
+  
+
 //        UIView * clearView = [[UIView alloc]init];
 //        clearView.frame = CGRectMake(0, 20, main_wight, 44);
 //        clearView.backgroundColor = [UIColor clearColor];
@@ -102,8 +103,13 @@
 //网络请求数据处理
 - (void)sendRequest
 {
-    NSString * urlStr = Detail_URL;
-    NSURL * url = [NSURL URLWithString:urlStr];
+    
+    NSString * strID = [NSString stringWithFormat:@"%d",_homeLostTwo.lyID];
+    NSString * urlStr1 = [Detail_URL_1 stringByAppendingString:strID];
+    NSString * urlStr2 = [urlStr1 stringByAppendingString:Detail_URL_2];
+    NSString * dddd = ddd;
+    NSURL * url = [NSURL URLWithString:dddd];
+    NSLog(@"zzzzzzzz%@",url);
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url];
     
     __weak UITableView * table = self.detailTV;
@@ -209,6 +215,9 @@
     
 //    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"white"] forBarMetrics:UIBarMetricsDefault];
     //self.navigationController.navigationBar.backgroundColor = [UIColor whiteColor];
+//    NSLog(@"--------%@",self.navigationController.navigationBar );
+    
+  self.navigationController.navigationBar.alpha = 1;
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)joinView:(UIButton *)sender

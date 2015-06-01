@@ -8,6 +8,11 @@
 
 #import "Detail.h"
 @implementation Detail
-
+//-(void)setValue:(id)value forUndefinedKey:(NSString *)key
+//{
+//    if ([key isEqual:@"id"]) {
+//        self.price_h=[value intValue];
+//    }
+//}
 
 @end
