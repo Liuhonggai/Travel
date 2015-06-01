@@ -9,7 +9,6 @@
 #import "LeftViewController.h"
 #import "SettingTableViewController.h"
 #import "HomeTableViewController.h"
-#import "CollectTableViewController.h"
 @interface LeftViewController ()
 
 @property (nonatomic ,strong) NSArray *arr;
@@ -31,7 +30,7 @@
     [self.view addSubview:table];
 
     self.arr = [NSArray arrayWithObjects:@"",@"登录",@"我的收藏",@"设置", nil];
-    self.photoArr = [NSArray arrayWithObjects:@"20150530024202197_easyicon_net_32.png",@"20150530024317286_easyicon_net_32.png",@"20150530024423920_easyicon_net_32.png",nil];
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -76,52 +75,19 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-   
-    
-    
-    
     if (indexPath.row == 3) {
+        //设置
         SettingTableViewController *setting = [[SettingTableViewController alloc] init];
         [self presentViewController:setting animated:YES completion:nil];
     }else if(indexPath.row == 2)
     {
-        CollectTableViewController *collect = [[CollectTableViewController alloc] init];
-        [self presentViewController:collect animated:YES completion:nil];
+        //收藏
+        
     }else if(indexPath.row == 1)
     {
-    
         
     }
-    
-    
-//    switch (indexPath.row) {
-//        case 0:{
-//            HomeTableViewController *home = [[HomeTableViewController alloc] init];
-//            [self presentViewController:home animated:YES completion:nil];
-//        }
-//            break;
-//        case 1:{
-//            HomeTableViewController *home = [[HomeTableViewController alloc] init];
-//            [self presentViewController:home animated:YES completion:nil];
-//        }
-//            break;
-//        case 0:{
-//            HomeTableViewController *home = [[HomeTableViewController alloc] init];
-//            [self presentViewController:home animated:YES completion:nil];
-//        }
-//            break;
-//        case 0:{
-//            HomeTableViewController *home = [[HomeTableViewController alloc] init];
-//            [self presentViewController:home animated:YES completion:nil];
-//        }
-//            break;
-//        default:
-//            break;
-//    }
-    
-    
 }
-
 
 
 - (void)didReceiveMemoryWarning {

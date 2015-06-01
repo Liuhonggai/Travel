@@ -14,8 +14,6 @@
 
 @property(nonatomic , strong)NSArray * homeList;
 
-@property(nonatomic , strong)UITableView * tableView;
-
 @property (nonatomic ,strong) UIBarButtonItem *leftBtn;
 
 @end

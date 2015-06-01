@@ -145,12 +145,29 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 1 && indexPath.section == 3) {
+#warning 打电话
         UIWebView*callWebview =[[UIWebView alloc] init];
-        NSURL *telURL =[NSURL URLWithString:@"tel://15210658225"];
+        NSURL *telURL =[NSURL URLWithString:@"tel://400-100-8888"];
         [callWebview loadRequest:[NSURLRequest requestWithURL:telURL]];
         //记得添加到view上
         [self.view addSubview:callWebview];
+    }else if(indexPath.section == 2 && indexPath.row == 1)
+    {
+#warning 第三方登陆
+        [self share];
     }
+    
+}
+
+- (void)share
+{
+   [UMSocialSnsService presentSnsIconSheetView:self
+                                         appKey:@"556972a467e58e403a006308"
+                                      shareText:@"你要分享的文字"
+                                     shareImage:[UIImage imageNamed:@"1.png"]
+                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToRenren,UMShareToDouban,nil]
+                                       delegate:nil];
+
 }
 
 - (void)back:(UIButton *)btn

@@ -27,7 +27,6 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.tableView.superview.frame = CGRectMake(100, 0, 300, 300);
     self.navigationItem.title = @"周末";
 
     self.leftBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"1.png"] style:UIBarButtonItemStyleDone target:self action:@selector(clicked:)];
@@ -50,7 +49,25 @@
         
     }];
     
+       
 }
+
+//点击方法
+- (void)sphereDidSelected:(int)index
+{
+    NSLog(@"sphere %d selected", index);
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
+
+
+
+
+
 - (void)clicked:(UIBarButtonItem *)nar
 {
     LeftViewController *left = [[LeftViewController alloc] init];
