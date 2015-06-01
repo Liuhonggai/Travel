@@ -27,11 +27,11 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.navigationItem.title = @"周末";
+    self.navigationItem.title = @"周末精选";
     UIBarButtonItem *leftBt = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"1.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(click:)];
     self.navigationItem.leftBarButtonItem = leftBt;
     
-    UIBarButtonItem *rightBt = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"1.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(searching:)];
+    UIBarButtonItem *rightBt = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"2015060105473234_easyicon_net_32.png"] style:UIBarButtonItemStylePlain target:self action:@selector(searching:)];
     self.navigationItem.rightBarButtonItem = rightBt;
     
     

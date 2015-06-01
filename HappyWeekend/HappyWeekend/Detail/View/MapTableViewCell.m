@@ -54,8 +54,8 @@
         _addressesLabel.numberOfLines = 0;
         [backView1 addSubview:_addressesLabel];
         
-        UIImageView * image = [[UIImageView alloc] initWithFrame:CGRectMake(main_wight-70, 25, 50, 50)];
-        image.image = [UIImage imageNamed:@"details_top_blue_share_inverse"];
+        UIImageView * image = [[UIImageView alloc] initWithFrame:CGRectMake(main_wight-70, 10, 40, 50)];
+        image.image = [UIImage imageNamed:@"20150601055141372_easyicon_net_32"];
         [backView1 addSubview:image];
         
     }

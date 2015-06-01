@@ -19,15 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    //    self.view.backgroundColor = [UIColor redColor];
-    
-    
     self.srr = @[@"清除浏览缓存"];
     self.arr = @[@"给我们意见",@"分享APP给好友"];
     self.arr1 = @[@"联系我们"];
@@ -76,9 +67,9 @@
     UILabel * headerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     headerLabel.backgroundColor = [UIColor clearColor];
     headerLabel.opaque = NO;
-    headerLabel.textColor = [UIColor colorWithRed:0.393 green:1.000 blue:0.908 alpha:1.000];
+    headerLabel.textColor = [UIColor blackColor];
     headerLabel.highlightedTextColor = [UIColor whiteColor];
-    headerLabel.font = [UIFont boldSystemFontOfSize:14];
+    headerLabel.font = [UIFont boldSystemFontOfSize:18];
     headerLabel.frame = CGRectMake(10.0, 0.0, 300.0, 44.0);
     
     if (section == 0) {
@@ -126,7 +117,7 @@
     if (cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:myCell];
     }
-    cell.backgroundColor = [UIColor colorWithRed:0.219 green:0.992 blue:0.158 alpha:0.30];
+    cell.backgroundColor = [UIColor colorWithWhite:0.949 alpha:1.000];
     if (indexPath.section == 1) {
         cell.textLabel.text = self.srr[indexPath.row];
     }else if(indexPath.section == 2)

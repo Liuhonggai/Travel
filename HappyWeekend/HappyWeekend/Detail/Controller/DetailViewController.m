@@ -13,6 +13,8 @@
 #import "DetailTableViewCell.h"
 #import "UITableViewCell+textHeight.h"
 #import "PayTableViewController.h"
+#import "UMSocial.h"
+
 #define TopView 200
 @interface DetailViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -22,19 +24,25 @@
 @implementation DetailViewController
 - (void)initWithBar
 {
+    
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"touming"] forBarMetrics:UIBarMetricsDefault];
         [[UINavigationBar appearance] setShadowImage:[UIImage alloc]];
     
-        UIView * clearView = [[UIView alloc]init];
-        clearView.frame = CGRectMake(0, 20, main_wight, 44);
-        clearView.backgroundColor = [UIColor clearColor];
-        [self.navigationController.navigationBar addSubview:clearView];
-        self.clearView=clearView;
+//        UIView * clearView = [[UIView alloc]init];
+//        clearView.frame = CGRectMake(0, 20, main_wight, 44);
+//        clearView.backgroundColor = [UIColor clearColor];
+//        [self.navigationController.navigationBar addSubview:clearView];
+//        self.clearView=clearView;
     
     
-        UIBarButtonItem * shareItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"details_top_blue_share_inverse"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(shareBtnClick:)];
+    UIBarButtonItem * blackItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back_blue"] style:UIBarButtonItemStylePlain target:self action:@selector(blackHomeItem)];
+    self.navigationItem.leftBarButtonItem = blackItem;
     
-    UIBarButtonItem * collecItem =[[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"tab_fav_inverse_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(CollecBtnClick:)];
+    
+    UIBarButtonItem * shareItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"details_top_blue_share_inverse"]  style:UIBarButtonItemStylePlain target:self action:@selector(shareBtnClick:)];
+    
+    
+    UIBarButtonItem * collecItem =[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"tab_fav_inverse_normal"]  style:UIBarButtonItemStylePlain target:self action:@selector(CollecBtnClick:)];
     self.navigationItem.rightBarButtonItems = @[shareItem,collecItem];
     
     [self.navigationController.navigationBar.layer setMasksToBounds:YES];//去掉navigationBar线
@@ -50,18 +58,18 @@
 }
 
 
--(void)viewWillDisappear:(BOOL)animated
-
-{
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"touming"] forBarMetrics:UIBarMetricsDefault];
-    [[UINavigationBar appearance] setShadowImage:[UIImage alloc]];
-    
-    UIView * clearView = [[UIView alloc]init];
-    clearView.frame = CGRectMake(0, 20, main_wight, 44);
-    clearView.backgroundColor = [UIColor clearColor];
-    [self.navigationController.navigationBar addSubview:clearView];
-    self.clearView=clearView;
-}
+//-(void)viewWillDisappear:(BOOL)animated
+//
+//{
+//    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"touming"] forBarMetrics:UIBarMetricsDefault];
+//    [[UINavigationBar appearance] setShadowImage:[UIImage alloc]];
+//    
+//    UIView * clearView = [[UIView alloc]init];
+//    clearView.frame = CGRectMake(0, 20, main_wight, 44);
+//    clearView.backgroundColor = [UIColor clearColor];
+//    [self.navigationController.navigationBar addSubview:clearView];
+//    self.clearView=clearView;
+//}
 
 
 - (void)viewDidLoad {
@@ -196,10 +204,17 @@
     [self.view addSubview:self.chrysanthemum];
     
 }
+- (void)blackHomeItem
+{
+    
+//    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"white"] forBarMetrics:UIBarMetricsDefault];
+    //self.navigationController.navigationBar.backgroundColor = [UIColor whiteColor];
+    [self.navigationController popViewControllerAnimated:YES];
+}
 - (void)joinView:(UIButton *)sender
 {
     
-
+    
     PayTableViewController * payView = [[PayTableViewController alloc] init];
     payView.detail = self.deta;
     
@@ -212,9 +227,20 @@
 
 }
 
+
+/**
+ *  分享事件
+ *
+ *  @param sender
+ */
 - (void)shareBtnClick:(UIBarButtonItem *)sender
 {
-    NSLog(@"xxx");
+    [UMSocialSnsService presentSnsIconSheetView:self
+                                         appKey:@"556972a467e58e403a006308"
+                                      shareText:@"你要分享的文字"
+                                     shareImage:[UIImage imageNamed:@"1.png"]
+                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToRenren,UMShareToDouban,nil]
+                                       delegate:nil];
 }
 - (void)CollecBtnClick:(UIBarButtonItem *)sender
 {

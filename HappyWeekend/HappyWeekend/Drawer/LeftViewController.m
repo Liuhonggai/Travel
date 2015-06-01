@@ -42,7 +42,7 @@
     if (indexPath.row == 0) {
         return 150;
     }
-    return 50;
+    return 60;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -71,14 +71,19 @@
     return cell;
 }
 
-
+/**
+ *  抽屉栏 点击时间
+ *
+ *  
+ */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
     if (indexPath.row == 3) {
         //设置
         SettingTableViewController *setting = [[SettingTableViewController alloc] init];
-        [self presentViewController:setting animated:YES completion:nil];
+        
+        [self presentViewController:setting animated:NO completion:nil];
     }else if(indexPath.row == 2)
     {
         //收藏
