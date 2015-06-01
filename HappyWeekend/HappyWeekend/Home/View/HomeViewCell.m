@@ -136,6 +136,8 @@
      */
    [self.imgView sd_setImageWithURL:[NSURL URLWithString:homeWeek.imgUrl] placeholderImage:[UIImage imageNamed:@"1_wsk_123_123"]];
     
+    
+    
 
 }
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -160,4 +162,12 @@
 {
     self.imgView.image = img;
 }
+
+
+
+
+
+
+
+
 @end

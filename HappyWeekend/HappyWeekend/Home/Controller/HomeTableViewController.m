@@ -27,13 +27,11 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
     self.navigationItem.title = @"周末";
-
-    self.leftBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"1.png"] style:UIBarButtonItemStyleDone target:self action:@selector(clicked:)];
-    self.navigationItem.leftBarButtonItem = _leftBtn;
+    UIBarButtonItem *leftBt = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"1.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(click:)];
+    self.navigationItem.leftBarButtonItem = leftBt;
     
-    UIBarButtonItem *rightBt = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"1.png"] style:UIBarButtonItemStyleDone target:self action:@selector(searching:)];
+    UIBarButtonItem *rightBt = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"1.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(searching:)];
     self.navigationItem.rightBarButtonItem = rightBt;
     
     
@@ -49,42 +47,20 @@
         [homeTVC.tableView reloadData];
     
     }];
+
     
-       
 }
-
-//点击方法
-- (void)sphereDidSelected:(int)index
+- (void)click:(UIBarButtonItem *)nar
 {
-    NSLog(@"sphere %d selected", index);
-}
-
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
-
-
-
-
-
-
-- (void)clicked:(UIBarButtonItem *)nar
-{
-    LeftViewController *left = [[LeftViewController alloc] init];
-    DDMenuController *dd = [[DDMenuController alloc] init];
-    dd.delegate = self;
-    [self menuController:dd willShowViewController:left];
-}
-- (void)menuController:(DDMenuController*)controller willShowViewController:(UIViewController*)controller1
-{
-    [controller showLeftController:YES];
+//    [self.drawerVC showHideSidebar];
+    
 }
 
 -(void)searching:(UIBarButtonItem *)nar
 {
     
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -121,7 +97,6 @@
             cell = [[HomeViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseIdentifier"];
         }
         cell.selectionStyle = NO;
-        
         
         
         cell.homeWeek = home;

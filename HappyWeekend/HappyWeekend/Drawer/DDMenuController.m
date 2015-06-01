@@ -48,7 +48,6 @@
 
 @synthesize tap=_tap;
 @synthesize pan=_pan;
-@synthesize button = _click;
 
 
 - (id)initWithRootViewController:(UIViewController*)controller {
@@ -332,9 +331,8 @@
     
 }
 
-
 - (void)tap:(UITapGestureRecognizer*)gesture
-{
+  {
     
     [gesture setEnabled:NO];
     [self showRootController:YES];

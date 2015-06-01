@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UMSocial.h"
+
 @interface SettingTableViewController : UITableViewController
-- (void)share;
+
 @end
