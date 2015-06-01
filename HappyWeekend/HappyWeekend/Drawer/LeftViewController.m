@@ -12,6 +12,9 @@
 @interface LeftViewController ()
 
 @property (nonatomic ,strong) NSArray *arr;
+@property (nonatomic,assign) BOOL isClick;
+@property (nonatomic ,strong) NSArray *photoArr;
+
 @end
 
 @implementation LeftViewController
@@ -23,9 +26,10 @@
     table.delegate = self;
     table.dataSource = self;
     table.backgroundColor = [UIColor whiteColor];
+    table.tableFooterView = [[UIView alloc] init];
     [self.view addSubview:table];
-    
-    self.arr = [NSArray arrayWithObjects:@"登陆",@"首页",@"我的收藏",@"设置", nil];
+
+    self.arr = [NSArray arrayWithObjects:@"",@"登录",@"我的收藏",@"设置", nil];
     
 }
 
@@ -36,7 +40,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {
-        return 200;
+        return 150;
     }
     return 50;
 }
@@ -46,20 +50,45 @@
     static NSString *cellIdentifier = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
     
-    cell.textLabel.text = self.arr[indexPath.row];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+   
+    if (indexPath.row == 1) {
+        cell.imageView.image =  [UIImage imageNamed:@"20150530024202197_easyicon_net_32"];
+         cell.textLabel.text = [self.arr objectAtIndex:1];
+    }else if(indexPath.row == 2)
+    {
+        cell.imageView.image = [UIImage imageNamed:@"20150530024317286_easyicon_net_32"];
+        cell.textLabel.text = [self.arr objectAtIndex:2];
+
+    }else if(indexPath.row == 3){
+    cell.imageView.image = [UIImage imageNamed:@"20150530024438931_easyicon_net_32"];
+        cell.textLabel.text = [self.arr objectAtIndex:3];
+
+    }
     return cell;
 }
 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     if (indexPath.row == 3) {
+        //设置
         SettingTableViewController *setting = [[SettingTableViewController alloc] init];
-        [self.navigationController pushViewController:setting animated:YES];
+        [self presentViewController:setting animated:YES completion:nil];
+    }else if(indexPath.row == 2)
+    {
+        //收藏
+        
+    }else if(indexPath.row == 1)
+    {
+        
     }
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

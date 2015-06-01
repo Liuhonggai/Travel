@@ -10,6 +10,7 @@
 #import "HomeTableViewController.h"
 #import "LeftViewController.h"
 #import "DDMenuController.h"
+#import "UMSocial.h"
 @interface AppDelegate ()
 
 @end
@@ -33,7 +34,7 @@
     
     self.window.rootViewController = mune;
 
-    
+    [UMSocialData setAppKey:@"556972a467e58e403a006308"];
     
     
     
