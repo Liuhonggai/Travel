@@ -8,7 +8,7 @@
 
 #import "HomeViewCell.h"
 #import "UIImageView+WebCache.h"
-
+#import "URLHeaders.h"
 @implementation HomeViewCell
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -18,34 +18,61 @@
     {
         UIImageView *imgV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height/3-30)];
         self.imgView = imgV;
-        [self addSubview:imgV];
+        [self.contentView addSubview:imgV];
         
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, [[UIScreen mainScreen] bounds].size.height/3-30, [[UIScreen mainScreen] bounds].size.width, 15)];
         titleLabel.font = [UIFont systemFontOfSize:12];
         self.titleLabel = titleLabel;
-        [self addSubview:titleLabel];
+        [self.contentView addSubview:titleLabel];
         
         UILabel * addrLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, [[UIScreen mainScreen] bounds].size.height/3-15, [[UIScreen mainScreen]bounds].size.width, 15)];
         addrLabel.font = [UIFont systemFontOfSize:12];
         self.addrLabel = addrLabel;
-        [self addSubview:addrLabel];
+        [self.contentView addSubview:addrLabel];
         
         UILabel * disLabel = [[UILabel alloc]initWithFrame:CGRectMake([[UIScreen mainScreen]bounds].size.width-80, [[UIScreen mainScreen] bounds].size.height/3-15, [[UIScreen mainScreen]bounds].size.width, 15)];
         addrLabel.font = [UIFont systemFontOfSize:12];
         self.disLabel = disLabel;
-        [self addSubview:disLabel];
+        [self.contentView addSubview:disLabel];
         
         UILabel * pLabel = [[UILabel alloc]initWithFrame:CGRectMake([[UIScreen mainScreen]bounds].size.width-80, [[UIScreen mainScreen] bounds].size.height/3-65, 100, 20)];
         pLabel.backgroundColor = [UIColor blackColor];
         pLabel.textColor = [UIColor whiteColor];
         addrLabel.font = [UIFont systemFontOfSize:13];
         self.pLabel = pLabel;
-        [self addSubview:pLabel];
+        [self.contentView addSubview:pLabel];
+        
+        UIButton * collectBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        collectBtn.frame = CGRectMake(main_wight *5/6, 10, 40, 40);
+        [collectBtn setImage:[[UIImage imageNamed:@"20150530024317286_easyicon_net_32"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+        [collectBtn addTarget:self action:@selector(collectClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:collectBtn];
         
         
     }
     return  self;
     
+}
+/**
+ *  点击收藏
+ *
+ *  @param sender 
+ */
+- (void)collectClick:(UIButton *)sender
+{
+     HomeListTwo * homeTwo = [[HomeListTwo alloc] init];
+#warning 判断是否已经收藏过了
+    if (!self.isExist ) {
+       
+        homeTwo.title =self.titleLabel.text;
+        [Home_DB addHome:homeTwo];
+        self.isExist = YES;
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"已经收藏" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+       // [Home_DB deleteHome:homeTwo];
+    }
+   
 }
 
 -(void)click:(UIButton * )btn

@@ -14,6 +14,8 @@
 #import "UITableViewCell+textHeight.h"
 #import "PayTableViewController.h"
 #import "UMSocial.h"
+#import "MBProgressHUD.h"
+#import "MJRefresh.h"
 
 #define TopView 200
 @interface DetailViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -59,31 +61,17 @@
 }
 
 
-//-(void)viewWillDisappear:(BOOL)animated
-//
-//{
-//    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"touming"] forBarMetrics:UIBarMetricsDefault];
-//    [[UINavigationBar appearance] setShadowImage:[UIImage alloc]];
-//    
-//    UIView * clearView = [[UIView alloc]init];
-//    clearView.frame = CGRectMake(0, 20, main_wight, 44);
-//    clearView.backgroundColor = [UIColor clearColor];
-//    [self.navigationController.navigationBar addSubview:clearView];
-//    self.clearView=clearView;
-//}
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+//    [self addHeaderRefresh];
+//    [self.detailTV.header beginRefreshing];
+
+   // [self creatChrysanthemum];
     
     [self foundTableView];
     [self foundUnderView];
-   
-   // [self creatChrysanthemum];
-
-   // [self.chrysanthemum stopAnimating];
-     }
+}
 /**
  *  视图即将出现
  *
@@ -96,17 +84,40 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self initWithBarBack];
      [self sendRequest];
+    
+    
+      //透明
    //self.navigationController.navigationBar.translucent = YES;
 }
 
-
+//添加下拉刷新
+- (void)addHeaderRefresh
+{
+    __weak DetailViewController * detailVC = self;
+    [self.detailTV addLegendHeaderWithRefreshingBlock:^{
+        [detailVC refreshData];
+    }];
+}
+//刷新数据
+- (void)refreshData
+{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self sendRequest];
+        [self.detailTV reloadData];
+        [self.detailTV.header endRefreshing];
+    });
+}
 //网络请求数据处理
 - (void)sendRequest
 {
-    
-    NSString * strID = [NSString stringWithFormat:@"%d",_homeLostTwo.lyID];
-    NSString * urlStr1 = [Detail_URL_1 stringByAppendingString:strID];
-    NSString * urlStr2 = [urlStr1 stringByAppendingString:Detail_URL_2];
+    MBProgressHUD *hud=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode=MBProgressHUDAnimationFade;//枚举类型不同的效果
+    hud.labelText=@"努力加载中";
+
+#warning 详情接口拼接---------
+//    NSString * strID = [NSString stringWithFormat:@"%d",_homeLostTwo.lyID];
+//    NSString * urlStr1 = [Detail_URL_1 stringByAppendingString:strID];
+//    NSString * urlStr2 = [urlStr1 stringByAppendingString:Detail_URL_2];
     NSString * dddd = ddd;
     NSURL * url = [NSURL URLWithString:dddd];
     NSLog(@"zzzzzzzz%@",url);
@@ -122,7 +133,10 @@
             NSDictionary * oldDic = [dic objectForKey:@"result"] ;
             
             Detail * detail = [[Detail alloc] init];
-                
+            
+//           [detail setValuesForKeysWithDictionary:oldDic];
+            
+            
             detail.floatStr = [oldDic objectForKey:@"title"];
             
             detail.content = [oldDic objectForKey:@"intro_show"];
@@ -132,11 +146,9 @@
             detail.siteStr = [oldDic objectForKey:@"poi_name"];
                 
             detail.price_h = [[oldDic objectForKey:@"price_show"] objectForKey:@"h"];
-//            detail.price_h= [NSString stringWithFormat:@"免费"];
-//            detail.price_l= [NSString stringWithFormat:@"免费"];
-
+            
             detail.price_l = [[oldDic objectForKey:@"price_show"] objectForKey:@"l"];
-         //   NSLog(@"```````%ld",(long)detail.price_l);
+            NSLog(@"wwwwwwwwwww%@",detail.price_l);
             
             detail.timeStr = [oldDic objectForKey:@"time_txt"];
             
@@ -145,10 +157,12 @@
             detail.pic_details_photos = [oldDic objectForKey:@"pic_details_show"];
             
             self.deta = detail;
-
             
-        }else{
-        
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            
+        }else
+        {
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
         }
         
         [table reloadData];
@@ -219,6 +233,7 @@
     
   self.navigationController.navigationBar.alpha = 1;
     [self.navigationController popViewControllerAnimated:YES];
+    //self.navigationController.navigationBar.translucent = NO;
 }
 - (void)joinView:(UIButton *)sender
 {
@@ -322,7 +337,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
   //  Detail * detailData = [self.detailList objectAtIndex:indexPath.row];
-    
+
     if (indexPath.row == 0) {
         ScrollPhotoTableViewCell * scrollPhotocell = [tableView dequeueReusableCellWithIdentifier:@"secrollPhoto"];
         if (!scrollPhotocell) {

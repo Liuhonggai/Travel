@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "HomeListTwo.h"
-
+#import "Home_DB.h"
 
 @interface HomeViewCell : UITableViewCell
 
@@ -30,4 +30,6 @@
 @property(nonatomic,strong)HomeListTwo *homeListTwo;
 
 @property(nonatomic , strong)UILabel * IDLabel;
+
+@property (nonatomic, assign) BOOL isExist;
 @end

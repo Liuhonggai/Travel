@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C23A7E0C1B1DB5D8007ABE5F /* CollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A7E0B1B1DB5D8007ABE5F /* CollectViewController.m */; };
+		C23A7E191B1DC75C007ABE5F /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A7E0F1B1DC75C007ABE5F /* FMDatabase.m */; };
+		C23A7E1A1B1DC75C007ABE5F /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A7E111B1DC75C007ABE5F /* FMDatabaseAdditions.m */; };
+		C23A7E1B1B1DC75C007ABE5F /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A7E131B1DC75C007ABE5F /* FMDatabasePool.m */; };
+		C23A7E1C1B1DC75C007ABE5F /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A7E151B1DC75C007ABE5F /* FMDatabaseQueue.m */; };
+		C23A7E1D1B1DC75C007ABE5F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A7E181B1DC75C007ABE5F /* FMResultSet.m */; };
+		C23A7E231B1DC97A007ABE5F /* Home_DB.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A7E221B1DC97A007ABE5F /* Home_DB.m */; };
+		C23A7E261B1DDE4A007ABE5F /* CollectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A7E251B1DDE4A007ABE5F /* CollectTableViewCell.m */; };
 		C25025AD1B12C10900366F58 /* HomeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C25025AA1B12C10900366F58 /* HomeViewCell.m */; };
 		C25025AE1B12C10900366F58 /* ScrollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C25025AC1B12C10900366F58 /* ScrollViewCell.m */; };
 		C25025B51B12C27000366F58 /* ImageDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = C25025B01B12C27000366F58 /* ImageDownload.m */; };
@@ -105,6 +113,7 @@
 		C2D8F57A1B1C505C00139047 /* ios-social-sdk-share-quick.html in Resources */ = {isa = PBXBuildFile; fileRef = C2D8F55D1B1C505C00139047 /* ios-social-sdk-share-quick.html */; };
 		C2D8F57B1B1C505C00139047 /* ios-social-sdk-socialBar.html in Resources */ = {isa = PBXBuildFile; fileRef = C2D8F55E1B1C505C00139047 /* ios-social-sdk-socialBar.html */; };
 		C2D8F57C1B1C505C00139047 /* markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = C2D8F55F1B1C505C00139047 /* markdown.css */; };
+		C2FB92731B1D50BE00C17849 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FB92721B1D50BE00C17849 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +127,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C23A7E0A1B1DB5D8007ABE5F /* CollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectViewController.h; sourceTree = "<group>"; };
+		C23A7E0B1B1DB5D8007ABE5F /* CollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectViewController.m; sourceTree = "<group>"; };
+		C23A7E0E1B1DC75C007ABE5F /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		C23A7E0F1B1DC75C007ABE5F /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		C23A7E101B1DC75C007ABE5F /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		C23A7E111B1DC75C007ABE5F /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		C23A7E121B1DC75C007ABE5F /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		C23A7E131B1DC75C007ABE5F /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		C23A7E141B1DC75C007ABE5F /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		C23A7E151B1DC75C007ABE5F /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		C23A7E161B1DC75C007ABE5F /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		C23A7E171B1DC75C007ABE5F /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		C23A7E181B1DC75C007ABE5F /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		C23A7E211B1DC97A007ABE5F /* Home_DB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Home_DB.h; sourceTree = "<group>"; };
+		C23A7E221B1DC97A007ABE5F /* Home_DB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Home_DB.m; sourceTree = "<group>"; };
+		C23A7E241B1DDE4A007ABE5F /* CollectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectTableViewCell.h; sourceTree = "<group>"; };
+		C23A7E251B1DDE4A007ABE5F /* CollectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectTableViewCell.m; sourceTree = "<group>"; };
 		C25025A91B12C10900366F58 /* HomeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewCell.h; sourceTree = "<group>"; };
 		C25025AA1B12C10900366F58 /* HomeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewCell.m; sourceTree = "<group>"; };
 		C25025AB1B12C10900366F58 /* ScrollViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewCell.h; sourceTree = "<group>"; };
@@ -288,6 +314,8 @@
 		C2D8F55D1B1C505C00139047 /* ios-social-sdk-share-quick.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "ios-social-sdk-share-quick.html"; sourceTree = "<group>"; };
 		C2D8F55E1B1C505C00139047 /* ios-social-sdk-socialBar.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "ios-social-sdk-socialBar.html"; sourceTree = "<group>"; };
 		C2D8F55F1B1C505C00139047 /* markdown.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = markdown.css; sourceTree = "<group>"; };
+		C2FB92711B1D50BE00C17849 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		C2FB92721B1D50BE00C17849 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +343,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C23A7E091B1DB5C8007ABE5F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C23A7E0A1B1DB5D8007ABE5F /* CollectViewController.h */,
+				C23A7E0B1B1DB5D8007ABE5F /* CollectViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C23A7E0D1B1DC75C007ABE5F /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				C23A7E0E1B1DC75C007ABE5F /* FMDatabase.h */,
+				C23A7E0F1B1DC75C007ABE5F /* FMDatabase.m */,
+				C23A7E101B1DC75C007ABE5F /* FMDatabaseAdditions.h */,
+				C23A7E111B1DC75C007ABE5F /* FMDatabaseAdditions.m */,
+				C23A7E121B1DC75C007ABE5F /* FMDatabasePool.h */,
+				C23A7E131B1DC75C007ABE5F /* FMDatabasePool.m */,
+				C23A7E141B1DC75C007ABE5F /* FMDatabaseQueue.h */,
+				C23A7E151B1DC75C007ABE5F /* FMDatabaseQueue.m */,
+				C23A7E161B1DC75C007ABE5F /* FMDB.h */,
+				C23A7E171B1DC75C007ABE5F /* FMResultSet.h */,
+				C23A7E181B1DC75C007ABE5F /* FMResultSet.m */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
 		C25025A81B12C0F800366F58 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -564,7 +619,7 @@
 		C2872BE91B1C770500262A6A /* Collection */ = {
 			isa = PBXGroup;
 			children = (
-				C2872BEC1B1C773400262A6A /* Controller */,
+				C23A7E091B1DB5C8007ABE5F /* Controller */,
 				C2872BEB1B1C772000262A6A /* Model */,
 				C2872BEA1B1C771300262A6A /* View */,
 			);
@@ -574,6 +629,8 @@
 		C2872BEA1B1C771300262A6A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C23A7E241B1DDE4A007ABE5F /* CollectTableViewCell.h */,
+				C23A7E251B1DDE4A007ABE5F /* CollectTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -583,13 +640,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		C2872BEC1B1C773400262A6A /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		C295D1C61B1082AC00669758 /* Drawer */ = {
@@ -617,6 +667,8 @@
 			children = (
 				C2D8F52A1B1C505C00139047 /* umeng_ios_social_sdk_4.2.1_arm64_custom */,
 				C2872BC41B1C75A300262A6A /* MJRefresh */,
+				C23A7E0D1B1DC75C007ABE5F /* FMDB */,
+				C2FB92701B1D50B200C17849 /* refresh */,
 				C25025E91B12C2A100366F58 /* SDWebImage */,
 				C2A66B4B1B12BC2200E6B73D /* URLHeaders.h */,
 				C25025AF1B12C27000366F58 /* ImageDownload.h */,
@@ -627,6 +679,8 @@
 				C256791D1B19590F00C7313F /* UITableViewCell+textHeight.m */,
 				C25025B31B12C27000366F58 /* Cachemanger.h */,
 				C25025B41B12C27000366F58 /* Cachemanger.m */,
+				C23A7E211B1DC97A007ABE5F /* Home_DB.h */,
+				C23A7E221B1DC97A007ABE5F /* Home_DB.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -778,6 +832,15 @@
 			path = UMSocial_Sdk_Instructions;
 			sourceTree = "<group>";
 		};
+		C2FB92701B1D50B200C17849 /* refresh */ = {
+			isa = PBXGroup;
+			children = (
+				C2FB92711B1D50BE00C17849 /* MBProgressHUD.h */,
+				C2FB92721B1D50BE00C17849 /* MBProgressHUD.m */,
+			);
+			path = refresh;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -923,6 +986,7 @@
 				C295D1CC1B1082C000669758 /* LeftViewController.m in Sources */,
 				C25025B51B12C27000366F58 /* ImageDownload.m in Sources */,
 				C25025AE1B12C10900366F58 /* ScrollViewCell.m in Sources */,
+				C2FB92731B1D50BE00C17849 /* MBProgressHUD.m in Sources */,
 				C2872BE81B1C75A300262A6A /* UIView+MJExtension.m in Sources */,
 				C25026101B12C2DA00366F58 /* SDWebImageDownloader.m in Sources */,
 				C2D60D671B0ECB560045DE6B /* Detail.m in Sources */,
@@ -932,18 +996,25 @@
 				C2872BE11B1C75A300262A6A /* MJRefreshGifFooter.m in Sources */,
 				C281B0501B1A9AAB00FA6591 /* PayViewCell.m in Sources */,
 				C2D60D641B0ECB470045DE6B /* DetailTableViewCell.m in Sources */,
+				C23A7E1C1B1DC75C007ABE5F /* FMDatabaseQueue.m in Sources */,
 				C25025AD1B12C10900366F58 /* HomeViewCell.m in Sources */,
 				C2ABB3B61B1317FA008B5BBB /* MapTableViewCell.m in Sources */,
 				C2D60D6B1B0ECFCD0045DE6B /* AppDelegate.m in Sources */,
 				C2872BE51B1C75A300262A6A /* MJRefreshLegendHeader.m in Sources */,
 				C250260B1B12C2DA00366F58 /* MKAnnotationView+WebCache.m in Sources */,
 				C2872BF51B1C876D00262A6A /* SearcherViewCell.m in Sources */,
+				C23A7E1D1B1DC75C007ABE5F /* FMResultSet.m in Sources */,
+				C23A7E1A1B1DC75C007ABE5F /* FMDatabaseAdditions.m in Sources */,
+				C23A7E0C1B1DB5D8007ABE5F /* CollectViewController.m in Sources */,
 				C281B0591B1AAE5700FA6591 /* TopTableViewCell.m in Sources */,
+				C23A7E191B1DC75C007ABE5F /* FMDatabase.m in Sources */,
+				C23A7E1B1B1DC75C007ABE5F /* FMDatabasePool.m in Sources */,
 				C250260C1B12C2DA00366F58 /* NSData+ImageContentType.m in Sources */,
 				C25026151B12C2DA00366F58 /* UIImage+GIF.m in Sources */,
 				C2ABB3B31B1317E4008B5BBB /* ScrollPhotoTableViewCell.m in Sources */,
 				C2872BE41B1C75A300262A6A /* MJRefreshLegendFooter.m in Sources */,
 				C250D28C1B17F5F1000E77E3 /* DetailViewController.m in Sources */,
+				C23A7E261B1DDE4A007ABE5F /* CollectTableViewCell.m in Sources */,
 				C256791E1B19590F00C7313F /* UITableViewCell+textHeight.m in Sources */,
 				C2872BE21B1C75A300262A6A /* MJRefreshGifHeader.m in Sources */,
 				C25026141B12C2DA00366F58 /* UIButton+WebCache.m in Sources */,
@@ -961,6 +1032,7 @@
 				C25026111B12C2DA00366F58 /* SDWebImageDownloaderOperation.m in Sources */,
 				C2872BE71B1C75A300262A6A /* UIScrollView+MJRefresh.m in Sources */,
 				C25025B61B12C27000366F58 /* NetworkHandler.m in Sources */,
+				C23A7E231B1DC97A007ABE5F /* Home_DB.m in Sources */,
 				C2872BE31B1C75A300262A6A /* MJRefreshHeader.m in Sources */,
 				C25026191B12C2DA00366F58 /* UIImageView+WebCache.m in Sources */,
 				C281B0561B1AAB2F00FA6591 /* PayTableViewController.m in Sources */,

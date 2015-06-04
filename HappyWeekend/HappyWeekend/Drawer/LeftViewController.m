@@ -9,6 +9,7 @@
 #import "LeftViewController.h"
 #import "SettingTableViewController.h"
 #import "HomeTableViewController.h"
+#import "CollectViewController.h"
 @interface LeftViewController ()
 
 @property (nonatomic ,strong) NSArray *arr;
@@ -86,7 +87,11 @@
         [self presentViewController:setting animated:NO completion:nil];
     }else if(indexPath.row == 2)
     {
-        //收藏
+        CollectViewController  * collectVC = [[CollectViewController alloc] init];
+        
+        UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:collectVC];
+        
+        [self presentViewController:nav animated:YES completion:nil];
         
     }else if(indexPath.row == 1)
     {

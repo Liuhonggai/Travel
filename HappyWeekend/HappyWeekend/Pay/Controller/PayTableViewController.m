@@ -11,6 +11,7 @@
 #import "PayViewCell.h"
 #import "TopTableViewCell.h"
 #import "DetailViewController.h"
+#import "MBProgressHUD.h"
 @interface PayTableViewController ()
 
 @end
@@ -63,7 +64,6 @@
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"touming"] forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[UIImage alloc]];
     
-  
     [self.navigationController popViewControllerAnimated:YES];
     
 }

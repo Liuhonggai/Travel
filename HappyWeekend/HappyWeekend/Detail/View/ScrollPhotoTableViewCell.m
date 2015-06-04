@@ -31,10 +31,7 @@
    
     if (([[NSString stringWithFormat:@"%@",_deta.price_h] isEqualToString:@"0"] && [[NSString stringWithFormat:@"%@",_deta.price_l] isEqualToString:@"0"])) {
         self.priceLabel.text = @"免费";
-
-        
     }else {
-        
         self.priceLabel.text = [NSString stringWithFormat:@"%@-%@元",_deta.price_l,_deta.price_h];
         
 
